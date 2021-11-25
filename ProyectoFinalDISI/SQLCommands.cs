@@ -21,7 +21,7 @@ namespace ProyectoFinalDISI
 
             return db;
         }
-
+        
         public static int Login(string nombre, string psd)
         {
             int valid = -1;
