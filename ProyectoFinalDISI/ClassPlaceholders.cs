@@ -6,6 +6,7 @@ namespace ProyectoFinalDISI
     internal class ClassPlaceholders
     {
         // Clase para gestionar todos los placeholders
+        // Se almacenan los placeholders en un arreglo por pantalla
         public static string[] PlaceHoldersRegistroUsuarios = new string[7] {
             "Ingresa el nombre",
             "Ingresa el apellido paterno",
@@ -28,6 +29,7 @@ namespace ProyectoFinalDISI
 
         public static void RemoveText(object sender, EventArgs e)
         {
+            // Borra el texto de la caja de texto para escribir en ella
             TextBox textBox = sender as TextBox;
             switch (textBox.Name)
             {
@@ -86,6 +88,7 @@ namespace ProyectoFinalDISI
 
         public static void AddText(object sender, EventArgs e)
         {
+            // Añade el placeholder a la caja de texto
             TextBox textBox = sender as TextBox;
             switch (textBox.Name)
             {

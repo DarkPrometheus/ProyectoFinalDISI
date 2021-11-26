@@ -18,9 +18,10 @@ namespace ProyectoFinalDISI.Pantallas_principales
         }
 
         #region Botones
+        // Dependiendo del texto en el boton se agrega una pantala u otra
         private void btnRegistrarUsuarios_Click(object sender, EventArgs e)
         {
-            DesplegarPantalla("RegistrarUsuario");
+            DesplegarPantalla("RegistrarEmpleado");
         }
 
         private void btnServicos_Click(object sender, EventArgs e)
@@ -57,6 +58,9 @@ namespace ProyectoFinalDISI.Pantallas_principales
                     registro.Dock = DockStyle.Fill;
                     AddControlToMainPanel(registro);
                     break;
+                case "Registrarcliente":
+                    // TODO
+                    break;
                 case "Servicios":
                     btnServicos.Width = widthBoton;
                     ControlesDeUsuario.Servicios servicios = new ControlesDeUsuario.Servicios();
@@ -82,12 +86,14 @@ namespace ProyectoFinalDISI.Pantallas_principales
             }
         }
         
+        // Agrega un control de usuario al panel principal - recibe un control de usuario
         void AddControlToMainPanel(Control control)
         {
             plMain.Controls.Clear();
             plMain.Controls.Add(control);
         }
 
+        // Reestablece el tamaño de los botones que agregan los controles de usuario
         void ResetearWidth()
         {
             int width = 180;
