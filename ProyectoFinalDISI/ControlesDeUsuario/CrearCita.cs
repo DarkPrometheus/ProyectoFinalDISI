@@ -26,5 +26,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtHoraCrearCita.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtHoraCrearCita.LostFocus += new EventHandler(ClassPlaceholders.AddText);
         }
+
+        // TODO: Registrar en la base de datos la cita nueva
     }
 }

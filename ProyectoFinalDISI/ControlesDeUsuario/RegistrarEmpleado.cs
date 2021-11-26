@@ -10,19 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalDISI.ControlesDeUsuario
 {
-    public partial class RegistrarUsuario : UserControl
+    public partial class RegistrarEmpleado : UserControl
     {
-        string[] PlaceHoldersRegistroUsuarios = new string[7] {
-            "Ingresa el nombre",
-            "Ingresa el apellido paterno",
-            "Ingresa el apellido materno",
-            "Ingresa el nombre",
-            "Ingresa el correo",
-            "Ingresa la contraseña",
-            "Confirma la contraseña"
-        };
-
-        public RegistrarUsuario()
+        public RegistrarEmpleado()
         {
             InitializeComponent();
 
@@ -48,5 +38,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtPassword.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtPassword.LostFocus += new EventHandler(ClassPlaceholders.AddText);
         }
+
+        // TODO: Registrar en la base de datos el empleado nuevo
     }
 }

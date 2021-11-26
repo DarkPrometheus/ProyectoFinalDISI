@@ -19,14 +19,19 @@ namespace ProyectoFinalDISI.Pantallas_principales
 
         #region Botones
         // Dependiendo del texto en el boton se agrega una pantala u otra
-        private void btnRegistrarUsuarios_Click(object sender, EventArgs e)
+        private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
         {
             DesplegarPantalla("RegistrarEmpleado");
         }
 
+        private void btnRegistrarCliente_Click(object sender, EventArgs e)
+        {
+            DesplegarPantalla("RegistrarCliente");
+        }
+
         private void btnServicos_Click(object sender, EventArgs e)
         {
-            DesplegarPantalla("Servicios");
+            DesplegarPantalla("Especialidades");
         }
 
         private void btnCrearCitas_Click(object sender, EventArgs e)
@@ -49,21 +54,21 @@ namespace ProyectoFinalDISI.Pantallas_principales
         {   // Metodo para desplegar las distintas pantallas principales de la aplicacion
             plMain.Controls.Clear();
             ResetearWidth();
-            int widthBoton = 190;
+            int widthBoton = 195;
             switch (pantalla)
             {
-                case "RegistrarUsuario":
-                    btnRegistrarUsuarios.Width = widthBoton;
-                    ControlesDeUsuario.RegistrarUsuario registro = new ControlesDeUsuario.RegistrarUsuario();
+                case "RegistrarEmpleado":
+                    btnRegistrarEmpleado.Width = widthBoton;
+                    ControlesDeUsuario.RegistrarEmpleado registro = new ControlesDeUsuario.RegistrarEmpleado();
                     registro.Dock = DockStyle.Fill;
                     AddControlToMainPanel(registro);
                     break;
                 case "Registrarcliente":
                     // TODO
                     break;
-                case "Servicios":
+                case "Especialidades":
                     btnServicos.Width = widthBoton;
-                    ControlesDeUsuario.Servicios servicios = new ControlesDeUsuario.Servicios();
+                    ControlesDeUsuario.Especialidades servicios = new ControlesDeUsuario.Especialidades();
                     servicios.Dock = DockStyle.Fill;
                     AddControlToMainPanel(servicios);
                     break;
@@ -96,8 +101,8 @@ namespace ProyectoFinalDISI.Pantallas_principales
         // Reestablece el tamaño de los botones que agregan los controles de usuario
         void ResetearWidth()
         {
-            int width = 180;
-            btnRegistrarUsuarios.Width = width;
+            int width = 185;
+            btnRegistrarEmpleado.Width = width;
             btnServicos.Width = width;
             btnCrearCitas.Width = width;
             btnConsultarCitas.Width = width;

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalDISI.ControlesDeUsuario
 {
-    partial class Servicios
+    partial class Especialidades
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -30,12 +30,8 @@
         {
             this.plTitle = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNombreServicio = new System.Windows.Forms.TextBox();
+            this.txtNombreEspecialidad = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtClaveServicio = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -111,42 +107,25 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(749, 60);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Servicios";
+            this.label6.Text = "Especialidades";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // txtNombreEspecialidad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 30);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Clave del servicio:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtNombreServicio
-            // 
-            this.txtNombreServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombreServicio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNombreServicio.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreServicio.Location = new System.Drawing.Point(227, 33);
-            this.txtNombreServicio.Name = "txtNombreServicio";
-            this.txtNombreServicio.Size = new System.Drawing.Size(218, 26);
-            this.txtNombreServicio.TabIndex = 7;
+            this.txtNombreEspecialidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNombreEspecialidad.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEspecialidad.Location = new System.Drawing.Point(227, 33);
+            this.txtNombreEspecialidad.Name = "txtNombreEspecialidad";
+            this.txtNombreEspecialidad.Size = new System.Drawing.Size(218, 26);
+            this.txtNombreEspecialidad.TabIndex = 7;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtNombreServicio, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtClaveServicio, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtNombreEspecialidad, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(145, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -156,40 +135,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 150);
             this.tableLayoutPanel1.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 90);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Descripcion:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtClaveServicio
-            // 
-            this.txtClaveServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClaveServicio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtClaveServicio.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClaveServicio.Location = new System.Drawing.Point(227, 3);
-            this.txtClaveServicio.Name = "txtClaveServicio";
-            this.txtClaveServicio.Size = new System.Drawing.Size(218, 26);
-            this.txtClaveServicio.TabIndex = 7;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescripcion.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(227, 63);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(218, 84);
-            this.txtDescripcion.TabIndex = 7;
             // 
             // label1
             // 
@@ -201,7 +146,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 30);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre del servicio:";
+            this.label1.Text = "Nombre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnRegistrar
@@ -753,7 +698,7 @@
             this.label17.Text = "Clave del servicio";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Servicios
+            // Especialidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -762,7 +707,7 @@
             this.Controls.Add(this.plBotones);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.plTitle);
-            this.Name = "Servicios";
+            this.Name = "Especialidades";
             this.Size = new System.Drawing.Size(755, 450);
             this.plTitle.ResumeLayout(false);
             this.plTitle.PerformLayout();
@@ -794,12 +739,8 @@
 
         private System.Windows.Forms.TableLayoutPanel plTitle;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombreServicio;
+        private System.Windows.Forms.TextBox txtNombreEspecialidad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtClaveServicio;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnEditar;

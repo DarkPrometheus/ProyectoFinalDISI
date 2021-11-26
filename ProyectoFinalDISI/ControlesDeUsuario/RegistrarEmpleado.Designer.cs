@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalDISI.ControlesDeUsuario
 {
-    partial class RegistrarUsuario
+    partial class RegistrarEmpleado
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -47,11 +47,11 @@
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.plTitle.SuspendLayout();
             this.plContent.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(749, 60);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Usuarios";
+            this.label6.Text = "Empleado nuevo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // plContent
@@ -316,29 +316,6 @@
             this.txtPassword.Size = new System.Drawing.Size(219, 26);
             this.txtPassword.TabIndex = 7;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(280, 402);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(190, 31);
-            this.btnModificar.TabIndex = 27;
-            this.btnModificar.Text = "Registrar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(226, 273);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -351,6 +328,16 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Administrador";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(226, 273);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 28;
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -379,7 +366,20 @@
             this.label1.Text = "Especialidad:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // RegistrarUsuario
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(280, 402);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(190, 31);
+            this.btnModificar.TabIndex = 27;
+            this.btnModificar.Text = "Registrar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // RegistrarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -387,7 +387,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.plContent);
             this.Controls.Add(this.plTitle);
-            this.Name = "RegistrarUsuario";
+            this.Name = "RegistrarEmpleado";
             this.Size = new System.Drawing.Size(755, 450);
             this.plTitle.ResumeLayout(false);
             this.plTitle.PerformLayout();

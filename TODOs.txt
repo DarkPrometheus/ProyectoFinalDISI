@@ -1,0 +1,16 @@
+TODO: Crear control de usuario para registrar un cliente nuevo
+TODO: Registrar en la base de datos el cliente nuevo
+TODO: Crear control de usuario para registrar un horario nuevo
+TODO: Registrar en la base de datos el horario nuevo
+TODO: Crear y programar dashboard de cliente
+TODO: Retrabajar la parte de creacion de citas, debe haber dos, desde la perspectiva del empleado y del cliente
+
+TODO: Crear metodo en la clase SQLCommands para insertar un cliente
+TODO: Crear metodo en la clase SQLCommands para insertar una cita
+TODO: Crear metodo en la clase SQLCommands para insertar un horario
+TODO: Crear metodo en la clase SQLCommands para insertar una especialidad
+
+TODO: Crear base de datos si no existe y crear un super usuario
+TODO: Registrar en la base de datos la cita nueva
+TODO: Registrar en la base de datos el empleado nuevo
+TODO: Registrar en la base de datos la especialidad

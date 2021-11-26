@@ -58,17 +58,17 @@
     <Compile Include="ControlesDeUsuario\CrearCita.Designer.cs">
       <DependentUpon>CrearCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlesDeUsuario\RegistrarUsuario.cs">
+    <Compile Include="ControlesDeUsuario\RegistrarEmpleado.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlesDeUsuario\RegistrarUsuario.Designer.cs">
-      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    <Compile Include="ControlesDeUsuario\RegistrarEmpleado.Designer.cs">
+      <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlesDeUsuario\Servicios.cs">
+    <Compile Include="ControlesDeUsuario\Especialidades.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlesDeUsuario\Servicios.Designer.cs">
-      <DependentUpon>Servicios.cs</DependentUpon>
+    <Compile Include="ControlesDeUsuario\Especialidades.Designer.cs">
+      <DependentUpon>Especialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
@@ -88,11 +88,11 @@
     <EmbeddedResource Include="ControlesDeUsuario\CrearCita.resx">
       <DependentUpon>CrearCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlesDeUsuario\RegistrarUsuario.resx">
-      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="ControlesDeUsuario\RegistrarEmpleado.resx">
+      <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlesDeUsuario\Servicios.resx">
-      <DependentUpon>Servicios.cs</DependentUpon>
+    <EmbeddedResource Include="ControlesDeUsuario\Especialidades.resx">
+      <DependentUpon>Especialidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
