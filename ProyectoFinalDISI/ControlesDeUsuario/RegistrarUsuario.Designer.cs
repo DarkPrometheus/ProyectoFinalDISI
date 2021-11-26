@@ -34,7 +34,6 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,16 +41,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtNumeroCliente = new System.Windows.Forms.TextBox();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.plTitle.SuspendLayout();
             this.plContent.SuspendLayout();
             this.SuspendLayout();
@@ -85,12 +85,11 @@
             // plContent
             // 
             this.plContent.ColumnCount = 2;
-            this.plContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.plContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
             this.plContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
             this.plContent.Controls.Add(this.dateTimePicker, 1, 6);
             this.plContent.Controls.Add(this.cbTipoUsuario, 1, 0);
             this.plContent.Controls.Add(this.label2, 0, 0);
-            this.plContent.Controls.Add(this.label1, 0, 1);
             this.plContent.Controls.Add(this.label3, 0, 3);
             this.plContent.Controls.Add(this.label4, 0, 2);
             this.plContent.Controls.Add(this.label5, 0, 5);
@@ -98,15 +97,16 @@
             this.plContent.Controls.Add(this.label8, 0, 6);
             this.plContent.Controls.Add(this.label9, 0, 7);
             this.plContent.Controls.Add(this.label10, 0, 8);
-            this.plContent.Controls.Add(this.txtNumeroCliente, 1, 1);
             this.plContent.Controls.Add(this.txtApellidoPaterno, 1, 2);
             this.plContent.Controls.Add(this.txtApellidoMaterno, 1, 3);
             this.plContent.Controls.Add(this.txtNombre, 1, 4);
             this.plContent.Controls.Add(this.cbGenero, 1, 5);
             this.plContent.Controls.Add(this.txtCorreo, 1, 7);
-            this.plContent.Controls.Add(this.label11, 0, 9);
             this.plContent.Controls.Add(this.txtPassword, 1, 8);
-            this.plContent.Controls.Add(this.txtConfirmPassword, 1, 9);
+            this.plContent.Controls.Add(this.label12, 0, 9);
+            this.plContent.Controls.Add(this.checkBox1, 1, 9);
+            this.plContent.Controls.Add(this.comboBox1, 1, 1);
+            this.plContent.Controls.Add(this.label1, 0, 1);
             this.plContent.Location = new System.Drawing.Point(140, 66);
             this.plContent.Name = "plContent";
             this.plContent.RowCount = 10;
@@ -120,6 +120,7 @@
             this.plContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0001F));
             this.plContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0001F));
             this.plContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.9991F));
+            this.plContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.plContent.Size = new System.Drawing.Size(448, 300);
             this.plContent.TabIndex = 20;
             // 
@@ -135,7 +136,6 @@
             // 
             // cbTipoUsuario
             // 
-            this.cbTipoUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoUsuario.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoUsuario.FormattingEnabled = true;
@@ -160,19 +160,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Tipo de usuario:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 30);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Numero de cliente:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -265,16 +252,6 @@
             this.label10.Text = "Contraseña:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtNumeroCliente
-            // 
-            this.txtNumeroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeroCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNumeroCliente.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroCliente.Location = new System.Drawing.Point(226, 33);
-            this.txtNumeroCliente.Name = "txtNumeroCliente";
-            this.txtNumeroCliente.Size = new System.Drawing.Size(219, 26);
-            this.txtNumeroCliente.TabIndex = 7;
-            // 
             // txtApellidoPaterno
             // 
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -329,19 +306,6 @@
             this.txtCorreo.Size = new System.Drawing.Size(219, 26);
             this.txtCorreo.TabIndex = 7;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, 270);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(217, 30);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Contraseña:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -352,28 +316,68 @@
             this.txtPassword.Size = new System.Drawing.Size(219, 26);
             this.txtPassword.TabIndex = 7;
             // 
-            // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(226, 273);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(219, 26);
-            this.txtConfirmPassword.TabIndex = 7;
-            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(280, 393);
+            this.btnModificar.Location = new System.Drawing.Point(280, 402);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(190, 31);
             this.btnModificar.TabIndex = 27;
             this.btnModificar.Text = "Registrar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(226, 273);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 28;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(3, 270);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(217, 30);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Administrador";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Seleccionar tipo de usuario",
+            "Empleado",
+            "Cliente"});
+            this.comboBox1.Location = new System.Drawing.Point(226, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(219, 28);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 30);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Especialidad:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // RegistrarUsuario
             // 
@@ -400,7 +404,6 @@
         private System.Windows.Forms.TableLayoutPanel plContent;
         private System.Windows.Forms.ComboBox cbTipoUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -408,7 +411,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNumeroCliente;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.TextBox txtApellidoMaterno;
@@ -417,7 +419,9 @@
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

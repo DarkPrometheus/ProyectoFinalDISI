@@ -42,12 +42,15 @@
             this.btnServicos = new System.Windows.Forms.Button();
             this.btnRegistrarUsuarios = new System.Windows.Forms.Button();
             this.plMain = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.plMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // plMenu
@@ -56,6 +59,7 @@
             this.plMenu.Controls.Add(this.pictureBox5);
             this.plMenu.Controls.Add(this.pictureBox4);
             this.plMenu.Controls.Add(this.pictureBox3);
+            this.plMenu.Controls.Add(this.pictureBox6);
             this.plMenu.Controls.Add(this.pictureBox1);
             this.plMenu.Controls.Add(this.lblUser);
             this.plMenu.Controls.Add(this.pictureBox2);
@@ -63,6 +67,7 @@
             this.plMenu.Controls.Add(this.btnConsultarCitas);
             this.plMenu.Controls.Add(this.btnCrearCitas);
             this.plMenu.Controls.Add(this.btnServicos);
+            this.plMenu.Controls.Add(this.button1);
             this.plMenu.Controls.Add(this.btnRegistrarUsuarios);
             this.plMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.plMenu.Location = new System.Drawing.Point(0, 0);
@@ -74,7 +79,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 224);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 264);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(35, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,7 +91,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 184);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 224);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,7 +103,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 144);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 184);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +137,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(77, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(82, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -159,7 +164,7 @@
             this.btnConsultarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCitas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 221);
+            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 261);
             this.btnConsultarCitas.Name = "btnConsultarCitas";
             this.btnConsultarCitas.Size = new System.Drawing.Size(180, 41);
             this.btnConsultarCitas.TabIndex = 0;
@@ -174,7 +179,7 @@
             this.btnCrearCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCrearCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCrearCitas.Location = new System.Drawing.Point(0, 181);
+            this.btnCrearCitas.Location = new System.Drawing.Point(0, 221);
             this.btnCrearCitas.Name = "btnCrearCitas";
             this.btnCrearCitas.Size = new System.Drawing.Size(180, 41);
             this.btnCrearCitas.TabIndex = 0;
@@ -189,7 +194,7 @@
             this.btnServicos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnServicos.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicos.ForeColor = System.Drawing.Color.White;
-            this.btnServicos.Location = new System.Drawing.Point(0, 141);
+            this.btnServicos.Location = new System.Drawing.Point(0, 181);
             this.btnServicos.Name = "btnServicos";
             this.btnServicos.Size = new System.Drawing.Size(180, 41);
             this.btnServicos.TabIndex = 0;
@@ -222,6 +227,33 @@
             this.plMain.Size = new System.Drawing.Size(755, 450);
             this.plMain.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 141);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 41);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "         Registrar cliente";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnRegistrarUsuarios_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 144);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.btnRegistrarUsuarios_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +293,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnConsultarCitas;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button button1;
     }
 }

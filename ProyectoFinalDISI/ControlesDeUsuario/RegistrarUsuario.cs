@@ -28,10 +28,6 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
 
             cbTipoUsuario.SelectedItem = cbTipoUsuario.Items[0];
 
-            txtNumeroCliente.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[0];
-            txtNumeroCliente.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
-            txtNumeroCliente.LostFocus += new EventHandler(ClassPlaceholders.AddText);
-
             txtApellidoPaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[1];
             txtApellidoPaterno.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtApellidoPaterno.LostFocus += new EventHandler(ClassPlaceholders.AddText);
@@ -51,10 +47,6 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtPassword.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[5];
             txtPassword.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtPassword.LostFocus += new EventHandler(ClassPlaceholders.AddText);
-
-            txtConfirmPassword.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[6];
-            txtConfirmPassword.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
-            txtConfirmPassword.LostFocus += new EventHandler(ClassPlaceholders.AddText);
         }
     }
 }
