@@ -64,7 +64,10 @@ namespace ProyectoFinalDISI.Pantallas_principales
                     AddControlToMainPanel(registro);
                     break;
                 case "Registrarcliente":
-                    // TODO
+                    btnRegistrarCliente.Width = widthBoton;
+                    ControlesDeUsuario.RegistrarCliente registrocliente = new ControlesDeUsuario.RegistrarCliente();
+                    registrocliente.Dock = DockStyle.Fill;
+                    AddControlToMainPanel(registrocliente);
                     break;
                 case "Especialidades":
                     btnServicos.Width = widthBoton;
@@ -103,6 +106,7 @@ namespace ProyectoFinalDISI.Pantallas_principales
         {
             int width = 185;
             btnRegistrarEmpleado.Width = width;
+            btnRegistrarCliente.Width = width;
             btnServicos.Width = width;
             btnCrearCitas.Width = width;
             btnConsultarCitas.Width = width;

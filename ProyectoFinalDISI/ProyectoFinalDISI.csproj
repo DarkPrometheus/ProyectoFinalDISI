@@ -58,6 +58,12 @@
     <Compile Include="ControlesDeUsuario\CrearCita.Designer.cs">
       <DependentUpon>CrearCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesDeUsuario\RegistrarCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\RegistrarCliente.Designer.cs">
+      <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesDeUsuario\RegistrarEmpleado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="SQLCommands.cs" />
     <EmbeddedResource Include="ControlesDeUsuario\CrearCita.resx">
       <DependentUpon>CrearCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\RegistrarCliente.resx">
+      <DependentUpon>RegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\RegistrarEmpleado.resx">
       <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
