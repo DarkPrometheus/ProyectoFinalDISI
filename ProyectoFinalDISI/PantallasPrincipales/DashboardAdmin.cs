@@ -41,7 +41,12 @@ namespace ProyectoFinalDISI.Pantallas_principales
 
         private void btnConsultarCitas_Click(object sender, EventArgs e)
         {
-            DesplegarPantalla("ConsultarCitas");
+            DesplegarPantalla("ConsultarCita");
+        }
+
+        private void btnHorarioNuevo_Click(object sender, EventArgs e)
+        {
+            DesplegarPantalla("HorarioNuevo");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -81,8 +86,17 @@ namespace ProyectoFinalDISI.Pantallas_principales
                     crearCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(crearCita);
                     break;
-                case "ConsultarCitas":
+                case "ConsultarCita":
                     btnConsultarCitas.Width = widthBoton;
+                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita();
+                    consultarCita.Dock = DockStyle.Fill;
+                    AddControlToMainPanel(consultarCita);
+                    break;
+                case "HorarioNuevo":
+                    btnHorarioNuevo.Width = widthBoton;
+                    ControlesDeUsuario.HorarioNuevo horarioNuevo = new ControlesDeUsuario.HorarioNuevo();
+                    horarioNuevo.Dock = DockStyle.Fill;
+                    AddControlToMainPanel(horarioNuevo);
                     break;
                 case "Salir":
                     // Se llama a la instancia ya creada de la pantalla de log in para regresar a ella
@@ -110,6 +124,10 @@ namespace ProyectoFinalDISI.Pantallas_principales
             btnServicos.Width = width;
             btnCrearCitas.Width = width;
             btnConsultarCitas.Width = width;
+            btnHorarioNuevo.Width = width;
+           
         }
+
+       
     }
 }

@@ -9,7 +9,8 @@ namespace ProyectoFinalDISI
 {
     internal class SQLCommands
     {
-        private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
+        private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\PuntoVenta";
+        //private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
         //private const string rutaBDD = @"C:\Users\Emmanuel\Documents\ProyectoCitas";
         public static SQLiteConnection GetInstance()
         {

@@ -52,11 +52,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassPlaceholders.cs" />
+    <Compile Include="ControlesDeUsuario\ConsultarCita.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\ConsultarCita.Designer.cs">
+      <DependentUpon>ConsultarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesDeUsuario\CrearCita.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlesDeUsuario\CrearCita.Designer.cs">
       <DependentUpon>CrearCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\HorarioNuevo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\HorarioNuevo.Designer.cs">
+      <DependentUpon>HorarioNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlesDeUsuario\RegistrarCliente.cs">
       <SubType>UserControl</SubType>
@@ -91,8 +103,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLCommands.cs" />
+    <EmbeddedResource Include="ControlesDeUsuario\ConsultarCita.resx">
+      <DependentUpon>ConsultarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CrearCita.resx">
       <DependentUpon>CrearCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\HorarioNuevo.resx">
+      <DependentUpon>HorarioNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\RegistrarCliente.resx">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
