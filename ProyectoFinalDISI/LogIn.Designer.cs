@@ -44,7 +44,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(113, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(355, 64);
+            this.label6.Size = new System.Drawing.Size(356, 64);
             this.label6.TabIndex = 3;
             this.label6.Text = "Inicio de sesion";
             // 
@@ -72,6 +72,7 @@
             this.txtPassword.Size = new System.Drawing.Size(189, 26);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.Text = "1234";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label2
             // 

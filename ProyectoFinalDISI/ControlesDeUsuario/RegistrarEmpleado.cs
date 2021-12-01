@@ -39,6 +39,11 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtPassword.LostFocus += new EventHandler(ClassPlaceholders.AddText);
         }
 
+        private void RegistrarEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // TODO: Registrar en la base de datos el empleado nuevo
     }
 }

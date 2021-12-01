@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.plMenu = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -43,8 +44,10 @@
             this.btnServicos = new System.Windows.Forms.Button();
             this.btnRegistrarCliente = new System.Windows.Forms.Button();
             this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
+            this.btnHorarioNuevo = new System.Windows.Forms.Button();
             this.plMain = new System.Windows.Forms.Panel();
             this.plMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,6 +59,7 @@
             // plMenu
             // 
             this.plMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.plMenu.Controls.Add(this.pictureBox7);
             this.plMenu.Controls.Add(this.pictureBox5);
             this.plMenu.Controls.Add(this.pictureBox4);
             this.plMenu.Controls.Add(this.pictureBox3);
@@ -69,11 +73,23 @@
             this.plMenu.Controls.Add(this.btnServicos);
             this.plMenu.Controls.Add(this.btnRegistrarCliente);
             this.plMenu.Controls.Add(this.btnRegistrarEmpleado);
+            this.plMenu.Controls.Add(this.btnHorarioNuevo);
             this.plMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.plMenu.Location = new System.Drawing.Point(0, 0);
             this.plMenu.Name = "plMenu";
             this.plMenu.Size = new System.Drawing.Size(225, 450);
             this.plMenu.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 305);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 9;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -245,6 +261,21 @@
             this.btnRegistrarEmpleado.UseVisualStyleBackColor = false;
             this.btnRegistrarEmpleado.Click += new System.EventHandler(this.btnRegistrarEmpleado_Click);
             // 
+            // btnHorarioNuevo
+            // 
+            this.btnHorarioNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnHorarioNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHorarioNuevo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorarioNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnHorarioNuevo.Location = new System.Drawing.Point(0, 296);
+            this.btnHorarioNuevo.Name = "btnHorarioNuevo";
+            this.btnHorarioNuevo.Size = new System.Drawing.Size(185, 41);
+            this.btnHorarioNuevo.TabIndex = 8;
+            this.btnHorarioNuevo.Text = "         Horario Nuevo";
+            this.btnHorarioNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorarioNuevo.UseVisualStyleBackColor = false;
+            this.btnHorarioNuevo.Click += new System.EventHandler(this.btnHorarioNuevo_Click);
+            // 
             // plMain
             // 
             this.plMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -268,6 +299,7 @@
             this.Text = "Dashboard";
             this.plMenu.ResumeLayout(false);
             this.plMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -295,5 +327,7 @@
         private System.Windows.Forms.Button btnConsultarCitas;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnRegistrarCliente;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnHorarioNuevo;
     }
 }

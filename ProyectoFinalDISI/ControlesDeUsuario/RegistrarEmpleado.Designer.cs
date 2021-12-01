@@ -389,6 +389,7 @@
             this.Controls.Add(this.plTitle);
             this.Name = "RegistrarEmpleado";
             this.Size = new System.Drawing.Size(755, 450);
+            this.Load += new System.EventHandler(this.RegistrarEmpleado_Load);
             this.plTitle.ResumeLayout(false);
             this.plTitle.PerformLayout();
             this.plContent.ResumeLayout(false);

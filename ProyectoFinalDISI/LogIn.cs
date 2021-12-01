@@ -43,5 +43,10 @@ namespace ProyectoFinalDISI
                 MessageBox.Show("Usuario o contraseña incorrecto", "Error");
             }
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
