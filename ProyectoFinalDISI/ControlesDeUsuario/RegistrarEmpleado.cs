@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
 
         private void RegistrarEmpleado_Load(object sender, EventArgs e)
         {
-
+            Queue Especialidades = SQLCommands.GetEspecialidades();
         }
 
         // TODO: Registrar en la base de datos el empleado nuevo

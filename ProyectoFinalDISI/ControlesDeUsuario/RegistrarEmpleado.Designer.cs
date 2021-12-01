@@ -49,7 +49,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbEspecialidades = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.plTitle.SuspendLayout();
@@ -105,7 +105,7 @@
             this.plContent.Controls.Add(this.txtPassword, 1, 8);
             this.plContent.Controls.Add(this.label12, 0, 9);
             this.plContent.Controls.Add(this.checkBox1, 1, 9);
-            this.plContent.Controls.Add(this.comboBox1, 1, 1);
+            this.plContent.Controls.Add(this.cbEspecialidades, 1, 1);
             this.plContent.Controls.Add(this.label1, 0, 1);
             this.plContent.Location = new System.Drawing.Point(140, 66);
             this.plContent.Name = "plContent";
@@ -339,19 +339,19 @@
             this.checkBox1.TabIndex = 28;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbEspecialidades
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEspecialidades.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEspecialidades.FormattingEnabled = true;
+            this.cbEspecialidades.Items.AddRange(new object[] {
             "Seleccionar tipo de usuario",
             "Empleado",
             "Cliente"});
-            this.comboBox1.Location = new System.Drawing.Point(226, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 28);
-            this.comboBox1.TabIndex = 21;
+            this.cbEspecialidades.Location = new System.Drawing.Point(226, 33);
+            this.cbEspecialidades.Name = "cbEspecialidades";
+            this.cbEspecialidades.Size = new System.Drawing.Size(219, 28);
+            this.cbEspecialidades.TabIndex = 21;
             // 
             // label1
             // 
@@ -422,7 +422,7 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEspecialidades;
         private System.Windows.Forms.Label label1;
     }
 }
