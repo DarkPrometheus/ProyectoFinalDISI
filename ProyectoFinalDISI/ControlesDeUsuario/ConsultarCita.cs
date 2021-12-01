@@ -14,6 +14,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
     {
         public ConsultarCita()
         {
+            // TODO: Colocar placesholders
             InitializeComponent();
         }
 

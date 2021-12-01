@@ -14,6 +14,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
     {
         public HorarioNuevo()
         {
+            // TODO: Colocar placeholders
             InitializeComponent();
         }
 
