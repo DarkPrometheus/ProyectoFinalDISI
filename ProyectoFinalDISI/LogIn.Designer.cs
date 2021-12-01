@@ -44,7 +44,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(113, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(356, 64);
+            this.label6.Size = new System.Drawing.Size(355, 64);
             this.label6.TabIndex = 3;
             this.label6.Text = "Inicio de sesion";
             // 
@@ -113,9 +113,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(137, 244);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(324, 18);
+            this.label3.Size = new System.Drawing.Size(319, 18);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Si no puede ingresar pide atyuda a un administrador";
+            this.label3.Text = "Si no puede ingresar pide ayuda a un administrador";
             // 
             // LogIn
             // 

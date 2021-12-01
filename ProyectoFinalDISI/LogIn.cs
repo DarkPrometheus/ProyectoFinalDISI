@@ -22,29 +22,26 @@ namespace ProyectoFinalDISI
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            //Dependiento de que tipo de usuario se redirecciona al correspondiente
-            //int usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
-            //if (usuario != -1)
-            //{
-            //    if (usuario == 1)
-            //    {
-            //        Hide();
-            //        Pantallas_principales.Dashboard dashboard = new Pantallas_principales.Dashboard();
-            //        dashboard.Show();
-            //    }
-            //    else
-            //        MessageBox.Show("No eres admin");
-            //}
-            //else
-            //{
-            //    txtEmail.Clear();
-            //    txtPassword.Clear();
-            //    txtEmail.Focus();
-            //    MessageBox.Show("Usuario o contraseña incorrecto", "Error");
-            //}
-            Hide();
-            Pantallas_principales.Dashboard dashboard = new Pantallas_principales.Dashboard();
-            dashboard.Show();
+            // Dependiento de que tipo de usuario se redirecciona al correspondiente
+            int usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
+            if (usuario != -1)
+            {
+                if (usuario == 1)
+                {
+                    Hide();
+                    Pantallas_principales.Dashboard dashboard = new Pantallas_principales.Dashboard();
+                    dashboard.Show();
+                }
+                else
+                    MessageBox.Show("No eres admin");
+            }
+            else
+            {
+                txtEmail.Clear();
+                txtPassword.Clear();
+                txtEmail.Focus();
+                MessageBox.Show("Usuario o contraseña incorrecto", "Error");
+            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)

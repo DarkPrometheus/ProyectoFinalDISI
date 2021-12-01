@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Collections;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProyectoFinalDISI
 {
@@ -29,32 +30,63 @@ namespace ProyectoFinalDISI
 
         // TODO: Crear base de datos si no existe y crear un super usuario
 
-        public static int Login(string nombre, string psd)
+        // Leer datos SQLite
+        //result.Add(new User
+        //{
+        //    Id = Convert.ToInt32(reader["id"].ToString()),
+        //    Name = reader["Name"].ToString(),
+        //    Lastname = reader["Lastname"].ToString(),
+        //    Birthday = Convert.ToDateTime(reader["Birthday"]),
+        //});
+
+        public static int Login(string correo, string psd)
         {
             int valid = -1;
-            using (var ctx = GetInstance())
+            bool boolCorreo = false, boolPsd = false;
+
+            Queue correos = new Queue(), psds = new Queue();
+            try
             {
-                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                using (var ctx = GetInstance())
                 {
-                    Conexion.Open();
-                    SQLiteCommand cmd = Conexion.CreateCommand();
-
-                    cmd.CommandText = "SELECT isAdmin FROM Empleado WHERE nombreEmpleado='" + nombre + "' AND password='" + psd + "'";
-                    SQLiteDataReader dr = cmd.ExecuteReader();
-
-                    if (dr.Read())
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                     {
-                        valid = Convert.ToInt32(dr[0]);
+                        string query = "SELECT * FROM Cuentas";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    correos.Enqueue(reader["Correo"].ToString());
+                                    psds.Enqueue(reader["Psd"].ToString());
+                                }
+                            }
+                        }
                     }
-                    else
-                        valid = -1;
-
-                    dr.Close();
-                    cmd.Dispose();
                 }
+
+                foreach (string item in correos)
+                    if (item == correo)
+                    {
+                        boolCorreo = true;
+                        break;
+                    }
+
+                foreach (string item in psds)
+                    if (item == psd)
+                    {
+                        boolPsd = true;
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
             }
 
-            return valid;
+            return (boolCorreo && boolPsd) ? 1 : -1;
         }
 
         #region Inserciones
@@ -142,22 +174,28 @@ namespace ProyectoFinalDISI
         public static Queue GetEspecialidades()
         {
             Queue Datos = new Queue();
-            using (var ctx = GetInstance())
+            try
             {
-                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                using (var ctx = GetInstance())
                 {
-                    Conexion.Open();
-                    SQLiteCommand cmd = Conexion.CreateCommand();
-
-                    cmd.CommandText = "SELECT NombreEspecialidad FROM Especialidad";
-                    SQLiteDataReader dr = cmd.ExecuteReader();
-
-                    if (dr.Read())
-                        Datos.Enqueue(Convert.ToString(dr));
-
-                    dr.Close();
-                    cmd.Dispose();
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT NombreEspecialidad FROM Especialidad";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    Datos.Enqueue(reader["NombreEspecialidad"].ToString());
+                            }
+                        }
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
             }
 
             return Datos;
