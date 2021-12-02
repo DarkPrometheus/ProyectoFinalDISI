@@ -24,7 +24,8 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            SQLCommands.InsertarCliente(new string[] { txtApellidoPaterno.Text,txtApellidoMaterno.Text, txtNombre.Text, cbGenero.Text, dateTimePicker.Text, txtCorreo.Text, txtPassword.Text });
+            // TODO: Validaciones
+            SQLCommands.InsertarCliente(new string[] { txtNombre.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, cbGenero.Text, dateTimePicker.Text, txtCorreo.Text, txtPassword.Text });
         }
 
         private void plContent_Paint(object sender, PaintEventArgs e)

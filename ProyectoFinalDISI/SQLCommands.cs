@@ -13,9 +13,9 @@ namespace ProyectoFinalDISI
     internal class SQLCommands
     {
         // La base de datos ahora se llama "ProyectoFinal"
-        private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
+        //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
         //private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
-        //private const string rutaBDD = @"C:\Users\Emmanuel\Documents\ProyectoFinal";
+        private const string rutaBDD = @"C:\Users\Emmanuel\Documents\ProyectoFinal";
         public static SQLiteConnection GetInstance()
         {
             // Devuelve una instancia de la base de datos
@@ -145,9 +145,9 @@ namespace ProyectoFinalDISI
                         SQLiteCommand cmd = Conexion.CreateCommand();
 
                         cmd.CommandText = "INSERT INTO Cliente (" +
+                            "NombreCliente, " +
                             "ApellidoPaterno, " +
                             "ApellidoMaterno, " +
-                            "NombreEmpleado, " +
                             "Genero, " +
                             "FechaNacimiento, " +
                             "Correo, " +
@@ -158,14 +158,13 @@ namespace ProyectoFinalDISI
                             "'" + datos[3] + "', " +
                             "'" + datos[4] + "', " +
                             "'" + datos[5] + "', " +
-                            "'" + datos[6] + "', " +
-                            "'" + datos[7] + "');";
+                            "'" + datos[6] + "');";
                         cmd.ExecuteNonQuery();
 
                         cmd.Dispose();
                     }
                 }
-                MessageBox.Show("Se ha ingresado " + datos[3] + " correctamente", "Sin errores");
+                MessageBox.Show("Se ha creado la cuenta del cliente " + datos[0] + " correctamente", "Sin errores");
             }
 
             catch (Exception e)

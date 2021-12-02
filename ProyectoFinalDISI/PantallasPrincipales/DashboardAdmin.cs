@@ -29,8 +29,6 @@ namespace ProyectoFinalDISI.Pantallas_principales
             DesplegarPantalla("RegistrarCliente");
         }
 
-       
-
         private void btnServicos_Click(object sender, EventArgs e)
         {
             DesplegarPantalla("Especialidades");
@@ -70,7 +68,7 @@ namespace ProyectoFinalDISI.Pantallas_principales
                     registro.Dock = DockStyle.Fill;
                     AddControlToMainPanel(registro);
                     break;
-                case "Registrarcliente":
+                case "RegistrarCliente":
                     btnRegistrarCliente.Width = widthBoton;
                     ControlesDeUsuario.RegistrarCliente registroe = new ControlesDeUsuario.RegistrarCliente();
                     registroe.Dock = DockStyle.Fill;

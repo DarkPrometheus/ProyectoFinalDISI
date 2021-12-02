@@ -31,6 +31,8 @@
             this.plTitle = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtespecialidad = new System.Windows.Forms.TextBox();
             this.cbUsuario = new System.Windows.Forms.ComboBox();
             this.cbMedico = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.plBotones = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.txtespecialidad = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.plTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.plBotones.SuspendLayout();
@@ -105,6 +105,29 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 233);
             this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 210);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(244, 23);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Especialidad:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtespecialidad
+            // 
+            this.txtespecialidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtespecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtespecialidad.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtespecialidad.Location = new System.Drawing.Point(253, 213);
+            this.txtespecialidad.Name = "txtespecialidad";
+            this.txtespecialidad.Size = new System.Drawing.Size(244, 26);
+            this.txtespecialidad.TabIndex = 27;
             // 
             // cbUsuario
             // 
@@ -262,29 +285,6 @@
             this.btnEditar.TabIndex = 28;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // txtespecialidad
-            // 
-            this.txtespecialidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtespecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtespecialidad.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtespecialidad.Location = new System.Drawing.Point(253, 213);
-            this.txtespecialidad.Name = "txtespecialidad";
-            this.txtespecialidad.Size = new System.Drawing.Size(244, 26);
-            this.txtespecialidad.TabIndex = 27;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 23);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Especialidad:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CrearCita
             // 
