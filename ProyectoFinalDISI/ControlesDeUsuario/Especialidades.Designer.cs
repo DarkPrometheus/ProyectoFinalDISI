@@ -91,7 +91,7 @@
             this.plTitle.Controls.Add(this.label6, 0, 0);
             this.plTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.plTitle.Location = new System.Drawing.Point(0, 0);
-            this.plTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plTitle.Margin = new System.Windows.Forms.Padding(4);
             this.plTitle.Name = "plTitle";
             this.plTitle.RowCount = 1;
             this.plTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -118,7 +118,7 @@
             this.txtNombreEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombreEspecialidad.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEspecialidad.Location = new System.Drawing.Point(302, 41);
-            this.txtNombreEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreEspecialidad.Name = "txtNombreEspecialidad";
             this.txtNombreEspecialidad.Size = new System.Drawing.Size(291, 33);
             this.txtNombreEspecialidad.TabIndex = 7;
@@ -131,7 +131,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtNombreEspecialidad, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(193, 81);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -161,7 +161,7 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(239, 0);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(120, 37);
             this.btnRegistrar.TabIndex = 28;
@@ -176,7 +176,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Location = new System.Drawing.Point(477, 0);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(120, 37);
             this.btnEditar.TabIndex = 28;
@@ -190,7 +190,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(0, 0);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 37);
             this.btnEliminar.TabIndex = 28;
@@ -203,7 +203,7 @@
             this.plBotones.Controls.Add(this.btnEditar);
             this.plBotones.Controls.Add(this.btnRegistrar);
             this.plBotones.Location = new System.Drawing.Point(193, 273);
-            this.plBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plBotones.Margin = new System.Windows.Forms.Padding(4);
             this.plBotones.Name = "plBotones";
             this.plBotones.Size = new System.Drawing.Size(597, 37);
             this.plBotones.TabIndex = 29;
@@ -222,7 +222,7 @@
             this.plContenedor.Controls.Add(this.tableLayoutPanel4);
             this.plContenedor.Controls.Add(this.plHeader);
             this.plContenedor.Location = new System.Drawing.Point(4, 318);
-            this.plContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.plContenedor.Name = "plContenedor";
             this.plContenedor.Size = new System.Drawing.Size(999, 232);
             this.plContenedor.TabIndex = 30;
@@ -240,7 +240,7 @@
             this.tableLayoutPanel8.Controls.Add(this.label28, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 259);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -304,7 +304,7 @@
             this.tableLayoutPanel7.Controls.Add(this.label25, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 222);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -368,7 +368,7 @@
             this.tableLayoutPanel6.Controls.Add(this.label22, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 185);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -432,7 +432,7 @@
             this.tableLayoutPanel5.Controls.Add(this.label19, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 148);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -496,7 +496,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 111);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -560,7 +560,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 74);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -625,7 +625,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 37);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -689,7 +689,7 @@
             this.plHeader.Controls.Add(this.label17, 0, 0);
             this.plHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.plHeader.Location = new System.Drawing.Point(0, 0);
-            this.plHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plHeader.Margin = new System.Windows.Forms.Padding(4);
             this.plHeader.Name = "plHeader";
             this.plHeader.RowCount = 1;
             this.plHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -750,7 +750,7 @@
             this.Controls.Add(this.plBotones);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.plTitle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Especialidades";
             this.Size = new System.Drawing.Size(1007, 554);
             this.plTitle.ResumeLayout(false);
