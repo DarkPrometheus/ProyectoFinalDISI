@@ -68,11 +68,11 @@ namespace ProyectoFinalDISI.Pantallas_principales
                     registro.Dock = DockStyle.Fill;
                     AddControlToMainPanel(registro);
                     break;
-                case "Registrarcliente":
+                case "RegistrarCliente":
                     btnRegistrarCliente.Width = widthBoton;
-                    ControlesDeUsuario.RegistrarCliente registrocliente = new ControlesDeUsuario.RegistrarCliente();
-                    registrocliente.Dock = DockStyle.Fill;
-                    AddControlToMainPanel(registrocliente);
+                    ControlesDeUsuario.RegistrarCliente registroe = new ControlesDeUsuario.RegistrarCliente();
+                    registroe.Dock = DockStyle.Fill;
+                    AddControlToMainPanel(registroe);
                     break;
                 case "Especialidades":
                     btnServicos.Width = widthBoton;
@@ -128,6 +128,6 @@ namespace ProyectoFinalDISI.Pantallas_principales
            
         }
 
-       
+      
     }
 }

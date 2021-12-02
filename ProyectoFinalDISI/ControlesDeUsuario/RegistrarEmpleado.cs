@@ -45,6 +45,18 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             Queue Especialidades = SQLCommands.GetEspecialidades();
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+    SQLCommands.InsertarEmpleado(new string[]{cbEspecialidades.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, txtNombre.Text, cbGenero.Text, dateTimePicker.Text, txtCorreo.Text, txtPassword.Text });
+
+        }
+
+        private void cbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // TODO: Registrar en la base de datos el empleado nuevo
     }
 }

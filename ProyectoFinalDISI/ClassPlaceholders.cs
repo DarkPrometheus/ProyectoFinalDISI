@@ -29,7 +29,8 @@ namespace ProyectoFinalDISI
             "Ingresa el nombre"
         };
 
-        public static void RemoveText(object sender, EventArgs e)
+
+    public static void RemoveText(object sender, EventArgs e)
         {
             // Borra el texto de la caja de texto para escribir en ella
             TextBox textBox = sender as TextBox;

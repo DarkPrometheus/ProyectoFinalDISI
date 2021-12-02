@@ -13,7 +13,7 @@ namespace ProyectoFinalDISI
     internal class SQLCommands
     {
         // La base de datos ahora se llama "ProyectoFinal"
-        //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\PuntoVenta";
+        //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
         //private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
         private const string rutaBDD = @"C:\Users\Emmanuel\Documents\PuntoVenta";
         public static SQLiteConnection GetInstance()
@@ -92,8 +92,10 @@ namespace ProyectoFinalDISI
         #region Inserciones
         public static void InsertarEmpleado(string[] datos)
         {
-            using (var ctx = GetInstance())
+          try
             {
+                using (var ctx = GetInstance())
+             {
                 using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                 {
                     Conexion.Open();
@@ -120,17 +122,95 @@ namespace ProyectoFinalDISI
 
                     cmd.Dispose();
                 }
+             }
+                MessageBox.Show("Se ha ingresado " + datos[3] + " correctamente", "Sin errores");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
+            }
+        } 
+
+        public static void InsertarCliente(string[] datos)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
+
+                        cmd.CommandText = "INSERT INTO Cliente (" +
+                            "NombreCliente, " +
+                            "ApellidoPaterno, " +
+                            "ApellidoMaterno, " +
+                            "Genero, " +
+                            "FechaNacimiento, " +
+                            "Correo, " +
+                            "Contraseña) VALUES(" +
+                            "'" + datos[0] + "', " +
+                            "'" + datos[1] + "', " +
+                            "'" + datos[2] + "', " +
+                            "'" + datos[3] + "', " +
+                            "'" + datos[4] + "', " +
+                            "'" + datos[5] + "', " +
+                            "'" + datos[6] + "');";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
+                }
+                MessageBox.Show("Se ha creado la cuenta del cliente " + datos[0] + " correctamente", "Sin errores");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
             }
         }
 
-        public static void InsertarCliente()
+        public static void InsertarCita(string[] datos)
         {
-            // TODO
-        }
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
 
-        public static void InsertarCita()
-        {
-            // TODO
+                        cmd.CommandText = "INSERT INTO Cita (" +
+                            "id_cita, " +
+                            "Especialiadad, " +
+                            "Usuario, " +
+                            "Medico, " +
+                            "Fecha, " +
+                            "Hora) VALUES(" +
+                            "'" + datos[0] + "', " +
+                            "'" + datos[1] + "', " +
+                            "'" + datos[2] + "', " +
+                            "'" + datos[3] + "', " +
+                            "'" + datos[4] + "', " +
+                            "'" + datos[5] + "');";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
+                }
+                MessageBox.Show("Se ha ingresado la cita " + datos[0] + " correctamente", "Sin errores");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
+            }
         }
 
         public static void InsertarHorario()

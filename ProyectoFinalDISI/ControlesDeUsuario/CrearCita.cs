@@ -27,6 +27,11 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtHoraCrearCita.LostFocus += new EventHandler(ClassPlaceholders.AddText);
         }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            SQLCommands.InsertarCita(new string[] { txtIdCitas.Text,txtespecialidad.Text, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, txtHoraCrearCita.Text });
+        }
+
         // TODO: Registrar en la base de datos la cita nueva
     }
 }
