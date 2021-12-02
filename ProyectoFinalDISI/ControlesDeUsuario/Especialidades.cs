@@ -21,6 +21,15 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtNombreEspecialidad.LostFocus += new EventHandler(ClassPlaceholders.AddText);
         }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (txtNombreEspecialidad.Text != "" && txtNombreEspecialidad.Text != ClassPlaceholders.PlaceHoldersEspecialidades[0])
+                SQLCommands.InsertarEspecialidad(txtNombreEspecialidad.Text);
+            else
+                MessageBox.Show("Ingresa algo en el nombre", "Nombre vacio");
+            txtNombreEspecialidad.Text = ClassPlaceholders.PlaceHoldersEspecialidades[0];
+        }
+
         // TODO: Registrar en la base de datos la especialidad
     }
 }

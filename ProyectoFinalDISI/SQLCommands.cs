@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Collections;
+using System.Windows.Forms;
+using System.IO;
 
 namespace ProyectoFinalDISI
 {
     internal class SQLCommands
     {
+        // La base de datos ahora se llama "ProyectoFinal"
         //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\PuntoVenta";
         //private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
-        private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
+        private const string rutaBDD = @"C:\Users\Emmanuel\Documents\PuntoVenta";
         public static SQLiteConnection GetInstance()
         {
             // Devuelve una instancia de la base de datos
@@ -26,34 +30,66 @@ namespace ProyectoFinalDISI
 
         // TODO: Crear base de datos si no existe y crear un super usuario
 
-        public static int Login(string nombre, string psd)
+        // Leer datos SQLite
+        //result.Add(new User
+        //{
+        //    Id = Convert.ToInt32(reader["id"].ToString()),
+        //    Name = reader["Name"].ToString(),
+        //    Lastname = reader["Lastname"].ToString(),
+        //    Birthday = Convert.ToDateTime(reader["Birthday"]),
+        //});
+
+        public static int Login(string correo, string psd)
         {
             int valid = -1;
-            using (var ctx = GetInstance())
+            bool boolCorreo = false, boolPsd = false;
+
+            Queue correos = new Queue(), psds = new Queue();
+            try
             {
-                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                using (var ctx = GetInstance())
                 {
-                    Conexion.Open();
-                    SQLiteCommand cmd = Conexion.CreateCommand();
-
-                    cmd.CommandText = "SELECT isAdmin FROM Empleados WHERE nombreEmpleado='" + nombre + "' AND password='" + psd + "'";
-                    SQLiteDataReader dr = cmd.ExecuteReader();
-
-                    if (dr.Read())
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                     {
-                        valid = Convert.ToInt32(dr[0]);
+                        string query = "SELECT * FROM Cuentas";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    correos.Enqueue(reader["Correo"].ToString());
+                                    psds.Enqueue(reader["Psd"].ToString());
+                                }
+                            }
+                        }
                     }
-                    else
-                        valid = -1;
-
-                    dr.Close();
-                    cmd.Dispose();
                 }
+
+                foreach (string item in correos)
+                    if (item == correo)
+                    {
+                        boolCorreo = true;
+                        break;
+                    }
+
+                foreach (string item in psds)
+                    if (item == psd)
+                    {
+                        boolPsd = true;
+                        break;
+                    }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
             }
 
-            return valid;
+            return (boolCorreo && boolPsd) ? 1 : -1;
         }
-        
+
+        #region Inserciones
         public static void InsertarEmpleado(string[] datos)
         {
             using (var ctx = GetInstance())
@@ -72,14 +108,14 @@ namespace ProyectoFinalDISI
                         "FechaNacimiento, " +
                         "Correo, " +
                         "Contraseña) VALUES(" +
-                        datos[0] + ", " +
-                        datos[1] + ", " +
-                        datos[2] + ", " +
-                        datos[3] + ", " +
-                        datos[4] + ", " +
-                        datos[5] + ", " +
-                        datos[6] + ", " +
-                        datos[7] + ");";
+                        "'" + datos[0] + "', " +
+                        "'" + datos[1] + "', " +
+                        "'" + datos[2] + "', " +
+                        "'" + datos[3] + "', " +
+                        "'" + datos[4] + "', " +
+                        "'" + datos[5] + "', " +
+                        "'" + datos[6] + "', " +
+                        "'" + datos[7] + "');";
                     cmd.ExecuteNonQuery();
 
                     cmd.Dispose();
@@ -106,5 +142,64 @@ namespace ProyectoFinalDISI
         {
             // TODO
         }
+        #endregion
+
+        #region Especialidades
+        public static void InsertarEspecialidad(string espcialidad)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
+
+                        cmd.CommandText = "INSERT INTO Especialidad(NombreEspecialidad) VALUES('" + espcialidad + "');";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
+                }
+                MessageBox.Show("Se ha ingresado " + espcialidad + " correctamente", "Sin errores");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
+            }
+        }
+
+        public static Queue GetEspecialidades()
+        {
+            Queue Datos = new Queue();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT NombreEspecialidad FROM Especialidad";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    Datos.Enqueue(reader["NombreEspecialidad"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
+            }
+
+            return Datos;
+        }
+        #endregion
     }
 }

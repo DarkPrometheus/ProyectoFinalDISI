@@ -22,7 +22,7 @@ namespace ProyectoFinalDISI
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            //Dependiento de que tipo de usuario se redirecciona al correspondiente
+            // Dependiento de que tipo de usuario se redirecciona al correspondiente
             int usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
             if (usuario != -1)
             {
