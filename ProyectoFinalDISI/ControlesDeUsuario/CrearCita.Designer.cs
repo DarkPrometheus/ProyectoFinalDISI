@@ -44,6 +44,8 @@
             this.plBotones = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.txtespecialidad = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.plTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.plBotones.SuspendLayout();
@@ -80,6 +82,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtespecialidad, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbUsuario, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbMedico, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -92,14 +96,14 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(151, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 150);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 233);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // cbUsuario
@@ -110,9 +114,9 @@
             this.cbUsuario.FormattingEnabled = true;
             this.cbUsuario.Items.AddRange(new object[] {
             "Selecciona un usuario"});
-            this.cbUsuario.Location = new System.Drawing.Point(227, 33);
+            this.cbUsuario.Location = new System.Drawing.Point(253, 45);
             this.cbUsuario.Name = "cbUsuario";
-            this.cbUsuario.Size = new System.Drawing.Size(218, 28);
+            this.cbUsuario.Size = new System.Drawing.Size(244, 28);
             this.cbUsuario.TabIndex = 26;
             // 
             // cbMedico
@@ -123,9 +127,9 @@
             this.cbMedico.FormattingEnabled = true;
             this.cbMedico.Items.AddRange(new object[] {
             "Selecciona un medico"});
-            this.cbMedico.Location = new System.Drawing.Point(227, 63);
+            this.cbMedico.Location = new System.Drawing.Point(253, 87);
             this.cbMedico.Name = "cbMedico";
-            this.cbMedico.Size = new System.Drawing.Size(218, 28);
+            this.cbMedico.Size = new System.Drawing.Size(244, 28);
             this.cbMedico.TabIndex = 25;
             // 
             // label2
@@ -136,7 +140,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 30);
+            this.label2.Size = new System.Drawing.Size(244, 42);
             this.label2.TabIndex = 5;
             this.label2.Text = "ID Cita:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,9 +150,9 @@
             this.txtIdCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdCitas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIdCitas.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCitas.Location = new System.Drawing.Point(227, 3);
+            this.txtIdCitas.Location = new System.Drawing.Point(253, 3);
             this.txtIdCitas.Name = "txtIdCitas";
-            this.txtIdCitas.Size = new System.Drawing.Size(218, 26);
+            this.txtIdCitas.Size = new System.Drawing.Size(244, 26);
             this.txtIdCitas.TabIndex = 7;
             // 
             // label1
@@ -157,9 +161,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 30);
+            this.label1.Location = new System.Drawing.Point(3, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 30);
+            this.label1.Size = new System.Drawing.Size(244, 42);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID Usuario:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -170,9 +174,9 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 90);
+            this.label5.Location = new System.Drawing.Point(3, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(218, 30);
+            this.label5.Size = new System.Drawing.Size(244, 42);
             this.label5.TabIndex = 5;
             this.label5.Text = "Fecha:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,9 +187,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 120);
+            this.label7.Location = new System.Drawing.Point(3, 168);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(218, 30);
+            this.label7.Size = new System.Drawing.Size(244, 42);
             this.label7.TabIndex = 5;
             this.label7.Text = "Hora:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -195,9 +199,9 @@
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Palatino Linotype", 14.25F);
             this.dateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
-            this.dateTimePicker.Location = new System.Drawing.Point(227, 93);
+            this.dateTimePicker.Location = new System.Drawing.Point(253, 129);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(218, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(244, 22);
             this.dateTimePicker.TabIndex = 22;
             // 
             // txtHoraCrearCita
@@ -205,9 +209,9 @@
             this.txtHoraCrearCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHoraCrearCita.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtHoraCrearCita.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraCrearCita.Location = new System.Drawing.Point(227, 123);
+            this.txtHoraCrearCita.Location = new System.Drawing.Point(253, 171);
             this.txtHoraCrearCita.Name = "txtHoraCrearCita";
-            this.txtHoraCrearCita.Size = new System.Drawing.Size(218, 26);
+            this.txtHoraCrearCita.Size = new System.Drawing.Size(244, 26);
             this.txtHoraCrearCita.TabIndex = 7;
             // 
             // label3
@@ -216,9 +220,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 60);
+            this.label3.Location = new System.Drawing.Point(3, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 30);
+            this.label3.Size = new System.Drawing.Size(244, 42);
             this.label3.TabIndex = 5;
             this.label3.Text = "Medico:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -244,6 +248,7 @@
             this.btnRegistrar.TabIndex = 28;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnEditar
             // 
@@ -257,6 +262,29 @@
             this.btnEditar.TabIndex = 28;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // txtespecialidad
+            // 
+            this.txtespecialidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtespecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtespecialidad.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtespecialidad.Location = new System.Drawing.Point(253, 213);
+            this.txtespecialidad.Name = "txtespecialidad";
+            this.txtespecialidad.Size = new System.Drawing.Size(244, 26);
+            this.txtespecialidad.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 210);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(244, 23);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Especialidad:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CrearCita
             // 
@@ -295,5 +323,7 @@
         private System.Windows.Forms.ComboBox cbMedico;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbUsuario;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtespecialidad;
     }
 }

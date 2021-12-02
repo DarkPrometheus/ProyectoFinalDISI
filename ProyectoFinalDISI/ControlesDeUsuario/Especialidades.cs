@@ -15,7 +15,6 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         public Especialidades()
         {
             InitializeComponent();
-
             txtNombreEspecialidad.Text = ClassPlaceholders.PlaceHoldersServicios[1];
             txtNombreEspecialidad.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtNombreEspecialidad.LostFocus += new EventHandler(ClassPlaceholders.AddText);

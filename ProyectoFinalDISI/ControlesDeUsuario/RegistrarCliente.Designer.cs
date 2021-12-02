@@ -30,10 +30,8 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.plContent = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,26 +62,25 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label6.Text = "Cliente nuevo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnModificar
+            // btnRegistrar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(287, 396);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(190, 31);
-            this.btnModificar.TabIndex = 28;
-            this.btnModificar.Text = "Registrar";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(287, 396);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(190, 31);
+            this.btnRegistrar.TabIndex = 28;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // plContent
             // 
             this.plContent.ColumnCount = 2;
             this.plContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
             this.plContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
-            this.plContent.Controls.Add(this.label2, 0, 0);
-            this.plContent.Controls.Add(this.cbTipoUsuario, 1, 0);
             this.plContent.Controls.Add(this.label4, 0, 1);
             this.plContent.Controls.Add(this.txtApellidoPaterno, 1, 1);
             this.plContent.Controls.Add(this.label3, 0, 2);
@@ -114,34 +111,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.plContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.plContent.Size = new System.Drawing.Size(448, 300);
             this.plContent.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 30);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tipo de usuario:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbTipoUsuario
-            // 
-            this.cbTipoUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipoUsuario.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoUsuario.FormattingEnabled = true;
-            this.cbTipoUsuario.Items.AddRange(new object[] {
-            "Seleccionar tipo de usuario",
-            "Empleado",
-            "Cliente"});
-            this.cbTipoUsuario.Location = new System.Drawing.Point(226, 3);
-            this.cbTipoUsuario.Name = "cbTipoUsuario";
-            this.cbTipoUsuario.Size = new System.Drawing.Size(219, 28);
-            this.cbTipoUsuario.TabIndex = 21;
+            this.plContent.Paint += new System.Windows.Forms.PaintEventHandler(this.plContent_Paint);
             // 
             // label4
             // 
@@ -315,7 +285,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Controls.Add(this.plContent);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label6);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegistrarCliente";
@@ -330,11 +300,9 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel plContent;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.ComboBox cbTipoUsuario;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

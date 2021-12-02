@@ -147,6 +147,7 @@
             this.cbTipoUsuario.Name = "cbTipoUsuario";
             this.cbTipoUsuario.Size = new System.Drawing.Size(219, 28);
             this.cbTipoUsuario.TabIndex = 21;
+            this.cbTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cbTipoUsuario_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -158,7 +159,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 30);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Tipo de usuario:";
+            this.label2.Text = "Tipo de usuario";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
@@ -378,6 +379,7 @@
             this.btnModificar.TabIndex = 27;
             this.btnModificar.Text = "Registrar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // RegistrarEmpleado
             // 
