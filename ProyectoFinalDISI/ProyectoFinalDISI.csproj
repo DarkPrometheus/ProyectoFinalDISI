@@ -88,6 +88,12 @@
     <Compile Include="ControlesDeUsuario\Especialidades.Designer.cs">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesDeUsuario\Visualizar _empleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\Visualizar _empleados.Designer.cs">
+      <DependentUpon>Visualizar _empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\Especialidades.resx">
       <DependentUpon>Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\Visualizar _empleados.resx">
+      <DependentUpon>Visualizar _empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

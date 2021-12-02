@@ -14,8 +14,8 @@ namespace ProyectoFinalDISI
     {
         // La base de datos ahora se llama "ProyectoFinal"
         //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
-        //private const string rutaBDD = @"C:\Users\Briseño\Documents\PuntoVenta";
-        private const string rutaBDD = @"C:\Users\Emmanuel\Documents\PuntoVenta";
+        private const string rutaBDD = @"C:\Users\Briseño\Documents\ProyectoFinal";
+        //private const string rutaBDD = @"C:\Users\Emmanuel\Documents\PuntoVenta";
         public static SQLiteConnection GetInstance()
         {
             // Devuelve una instancia de la base de datos

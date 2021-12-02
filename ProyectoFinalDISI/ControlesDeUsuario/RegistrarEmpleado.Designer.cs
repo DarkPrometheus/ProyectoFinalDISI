@@ -63,7 +63,7 @@
             this.plTitle.Controls.Add(this.label6, 0, 0);
             this.plTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.plTitle.Location = new System.Drawing.Point(0, 0);
-            this.plTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plTitle.Margin = new System.Windows.Forms.Padding(4);
             this.plTitle.Name = "plTitle";
             this.plTitle.RowCount = 1;
             this.plTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -110,7 +110,7 @@
             this.plContent.Controls.Add(this.cbEspecialidades, 1, 1);
             this.plContent.Controls.Add(this.label1, 0, 1);
             this.plContent.Location = new System.Drawing.Point(187, 81);
-            this.plContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plContent.Margin = new System.Windows.Forms.Padding(4);
             this.plContent.Name = "plContent";
             this.plContent.RowCount = 10;
             this.plContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0001F));
@@ -133,7 +133,7 @@
             this.dateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.dateTimePicker.Location = new System.Drawing.Point(302, 220);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(291, 26);
             this.dateTimePicker.TabIndex = 21;
@@ -148,7 +148,7 @@
             "Empleado",
             "Cliente"});
             this.cbTipoUsuario.Location = new System.Drawing.Point(302, 4);
-            this.cbTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTipoUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
             this.cbTipoUsuario.Size = new System.Drawing.Size(291, 34);
             this.cbTipoUsuario.TabIndex = 21;
@@ -272,7 +272,7 @@
             this.txtApellidoPaterno.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.Location = new System.Drawing.Point(302, 76);
-            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(291, 33);
             this.txtApellidoPaterno.TabIndex = 7;
@@ -283,7 +283,7 @@
             this.txtApellidoMaterno.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.Location = new System.Drawing.Point(302, 112);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(291, 33);
             this.txtApellidoMaterno.TabIndex = 7;
@@ -294,7 +294,7 @@
             this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombre.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(302, 148);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(291, 33);
             this.txtNombre.TabIndex = 7;
@@ -309,7 +309,7 @@
             "Hombre",
             "Mujer"});
             this.cbGenero.Location = new System.Drawing.Point(302, 184);
-            this.cbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(291, 34);
             this.cbGenero.TabIndex = 21;
@@ -320,7 +320,7 @@
             this.txtCorreo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCorreo.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(302, 256);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(291, 33);
             this.txtCorreo.TabIndex = 7;
@@ -331,7 +331,7 @@
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(302, 292);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(291, 33);
             this.txtPassword.TabIndex = 7;
@@ -355,7 +355,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(302, 328);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 28;
@@ -371,7 +371,7 @@
             "Empleado",
             "Cliente"});
             this.cbEspecialidades.Location = new System.Drawing.Point(302, 40);
-            this.cbEspecialidades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEspecialidades.Margin = new System.Windows.Forms.Padding(4);
             this.cbEspecialidades.Name = "cbEspecialidades";
             this.cbEspecialidades.Size = new System.Drawing.Size(291, 34);
             this.cbEspecialidades.TabIndex = 21;
@@ -397,7 +397,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(373, 495);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(253, 38);
             this.btnModificar.TabIndex = 27;
@@ -413,7 +413,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.plContent);
             this.Controls.Add(this.plTitle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistrarEmpleado";
             this.Size = new System.Drawing.Size(1007, 554);
             this.Load += new System.EventHandler(this.RegistrarEmpleado_Load);
