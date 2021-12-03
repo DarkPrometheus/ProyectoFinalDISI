@@ -1,6 +1,7 @@
-﻿namespace ProyectoFinalDISI.ControlesDeUsuario
+﻿
+namespace ProyectoFinalDISI.ControlesDeUsuario
 {
-    partial class CrearCita
+    partial class CrearCita_Clientes
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -30,6 +31,7 @@
         {
             this.plTitle = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtespecialidad = new System.Windows.Forms.TextBox();
@@ -43,12 +45,8 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.txtHoraCrearCita = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.plBotones = new System.Windows.Forms.Panel();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.plTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.plBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // plTitle
@@ -63,7 +61,7 @@
             this.plTitle.RowCount = 1;
             this.plTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.plTitle.Size = new System.Drawing.Size(1007, 74);
-            this.plTitle.TabIndex = 11;
+            this.plTitle.TabIndex = 13;
             // 
             // label6
             // 
@@ -76,8 +74,22 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(999, 74);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Crear citas";
+            this.label6.Text = "Crear cita";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(434, 414);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(120, 37);
+            this.btnRegistrar.TabIndex = 29;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -96,7 +108,7 @@
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtHoraCrearCita, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(201, 82);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(170, 96);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -107,7 +119,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(667, 287);
-            this.tableLayoutPanel1.TabIndex = 12;
+            this.tableLayoutPanel1.TabIndex = 30;
             // 
             // label4
             // 
@@ -265,70 +277,33 @@
             this.label3.Text = "Medico:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // plBotones
-            // 
-            this.plBotones.Controls.Add(this.btnRegistrar);
-            this.plBotones.Controls.Add(this.btnEditar);
-            this.plBotones.Location = new System.Drawing.Point(201, 489);
-            this.plBotones.Margin = new System.Windows.Forms.Padding(4);
-            this.plBotones.Name = "plBotones";
-            this.plBotones.Size = new System.Drawing.Size(597, 37);
-            this.plBotones.TabIndex = 30;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 0);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(120, 37);
-            this.btnRegistrar.TabIndex = 28;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(477, 0);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(120, 37);
-            this.btnEditar.TabIndex = 28;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // CrearCita
+            // CrearCita_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Controls.Add(this.plBotones);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.plTitle);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "CrearCita";
+            this.Name = "CrearCita_Clientes";
             this.Size = new System.Drawing.Size(1007, 554);
             this.plTitle.ResumeLayout(false);
             this.plTitle.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.plBotones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private System.Windows.Forms.TableLayoutPanel plTitle;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtespecialidad;
+        private System.Windows.Forms.ComboBox cbUsuario;
+        private System.Windows.Forms.ComboBox cbMedico;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIdCitas;
         private System.Windows.Forms.Label label1;
@@ -336,13 +311,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.TextBox txtHoraCrearCita;
-        private System.Windows.Forms.Panel plBotones;
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.ComboBox cbMedico;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbUsuario;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtespecialidad;
     }
 }

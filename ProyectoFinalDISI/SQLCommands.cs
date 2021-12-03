@@ -274,12 +274,77 @@ namespace ProyectoFinalDISI
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Error");
+                MessageBox.Show(e.Message, "No se encontro la especialidad");
                 throw;
             }
 
             return Datos;
         }
+
+
+        public static Queue GetIDUsuario()
+        {
+            Queue Datos = new Queue();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT idUsuario FROM Cliente";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    Datos.Enqueue(reader["idUsuario"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "No se encontro el usuario");
+                throw;
+            }
+
+            return Datos;
+        }
+
+        public static Queue GetNombreEmpleado()
+        {
+            Queue Datos = new Queue();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT NombreEmpleado FROM Empleado";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    Datos.Enqueue(reader["NombreEmpleado"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "No se encontro el medico");
+                throw;
+            }
+
+            return Datos;
+        }
+
+
+
+
         #endregion
     }
 }

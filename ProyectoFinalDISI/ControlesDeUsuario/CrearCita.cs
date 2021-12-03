@@ -25,6 +25,14 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtHoraCrearCita.Text = ClassPlaceholders.PlaceHoldersCrearCita[1];
             txtHoraCrearCita.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtHoraCrearCita.LostFocus += new EventHandler(ClassPlaceholders.AddText);
+
+
+            foreach (var item in SQLCommands.GetIDUsuario())
+                cbUsuario.Items.Add(item);
+
+
+            foreach (var item in SQLCommands.GetNombreEmpleado())
+                cbMedico.Items.Add(item);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

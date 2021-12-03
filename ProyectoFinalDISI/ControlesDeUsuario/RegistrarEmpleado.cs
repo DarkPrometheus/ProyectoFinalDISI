@@ -17,7 +17,6 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             InitializeComponent();
 
-            cbTipoUsuario.SelectedItem = cbTipoUsuario.Items[0];
 
             txtApellidoPaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[1];
             txtApellidoPaterno.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
@@ -38,11 +37,17 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtPassword.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[5];
             txtPassword.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtPassword.LostFocus += new EventHandler(ClassPlaceholders.AddText);
+
+            foreach (var item in SQLCommands.GetEspecialidades())
+                cbEspecialidades.Items.Add(item);
         }
 
         private void RegistrarEmpleado_Load(object sender, EventArgs e)
         {
             Queue Especialidades = SQLCommands.GetEspecialidades();
+
+
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -53,6 +58,11 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         }
 
         private void cbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEspecialidades_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
