@@ -33,20 +33,17 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.plMenu = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultarCitas = new System.Windows.Forms.Button();
             this.btnCrearCitas = new System.Windows.Forms.Button();
-            this.btnServicos = new System.Windows.Forms.Button();
             this.btnRegistrarCliente = new System.Windows.Forms.Button();
             this.plMain = new System.Windows.Forms.Panel();
             this.plMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -56,14 +53,12 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.plMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.plMenu.Controls.Add(this.pictureBox5);
             this.plMenu.Controls.Add(this.pictureBox4);
-            this.plMenu.Controls.Add(this.pictureBox3);
             this.plMenu.Controls.Add(this.pictureBox6);
             this.plMenu.Controls.Add(this.lblUser);
             this.plMenu.Controls.Add(this.pictureBox2);
             this.plMenu.Controls.Add(this.btnSalir);
             this.plMenu.Controls.Add(this.btnConsultarCitas);
             this.plMenu.Controls.Add(this.btnCrearCitas);
-            this.plMenu.Controls.Add(this.btnServicos);
             this.plMenu.Controls.Add(this.btnRegistrarCliente);
             this.plMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.plMenu.Location = new System.Drawing.Point(0, 0);
@@ -76,7 +71,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 281);
+            this.pictureBox5.Location = new System.Drawing.Point(4, 226);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 43);
@@ -88,25 +83,13 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 232);
+            this.pictureBox4.Location = new System.Drawing.Point(4, 177);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 43);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 182);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -163,7 +146,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnConsultarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCitas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 277);
+            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 222);
             this.btnConsultarCitas.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultarCitas.Name = "btnConsultarCitas";
             this.btnConsultarCitas.Size = new System.Drawing.Size(247, 50);
@@ -178,7 +161,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnCrearCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCrearCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCrearCitas.Location = new System.Drawing.Point(0, 228);
+            this.btnCrearCitas.Location = new System.Drawing.Point(0, 173);
             this.btnCrearCitas.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrearCitas.Name = "btnCrearCitas";
             this.btnCrearCitas.Size = new System.Drawing.Size(247, 50);
@@ -186,21 +169,6 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnCrearCitas.Text = "         Crear cita";
             this.btnCrearCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearCitas.UseVisualStyleBackColor = false;
-            // 
-            // btnServicos
-            // 
-            this.btnServicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnServicos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnServicos.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServicos.ForeColor = System.Drawing.Color.White;
-            this.btnServicos.Location = new System.Drawing.Point(0, 179);
-            this.btnServicos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnServicos.Name = "btnServicos";
-            this.btnServicos.Size = new System.Drawing.Size(247, 50);
-            this.btnServicos.TabIndex = 0;
-            this.btnServicos.Text = "         Especialidades";
-            this.btnServicos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServicos.UseVisualStyleBackColor = false;
             // 
             // btnRegistrarCliente
             // 
@@ -242,7 +210,6 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.plMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -254,14 +221,12 @@ namespace ProyectoFinalDISI.PantallasPrincipales
         private System.Windows.Forms.Panel plMenu;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConsultarCitas;
         private System.Windows.Forms.Button btnCrearCitas;
-        private System.Windows.Forms.Button btnServicos;
         private System.Windows.Forms.Button btnRegistrarCliente;
         private System.Windows.Forms.Panel plMain;
     }
