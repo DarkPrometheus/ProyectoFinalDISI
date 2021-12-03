@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using System.Collections;
+using System.Windows.Forms;
 
 namespace ProyectoFinalDISI.ControlesDeUsuario
 {
@@ -16,5 +19,12 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             InitializeComponent();
         }
+        
+        private void Visualizar__empleados_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+       
     }
 }
