@@ -31,9 +31,16 @@ namespace ProyectoFinalDISI
                     Hide();
                     Pantallas_principales.Dashboard dashboard = new Pantallas_principales.Dashboard();
                     dashboard.Show();
+
                 }
                 else
-                    MessageBox.Show("No eres admin");
+                    if (usuario == 2)
+                {
+                    Hide();
+                    PantallasPrincipales.DashboardCliente dashboard = new PantallasPrincipales.DashboardCliente();
+                    dashboard.Show();
+                }
+
             }
             else
             {

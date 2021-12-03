@@ -41,51 +41,100 @@ namespace ProyectoFinalDISI
 
         public static int Login(string correo, string psd)
         {
-            int valid = -1;
+            int valid = 1;
             bool boolCorreo = false, boolPsd = false;
 
             Queue correos = new Queue(), psds = new Queue();
             try
             {
-                using (var ctx = GetInstance())
+                if (valid == 1)
                 {
-                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    using (var ctx = GetInstance())
                     {
-                        string query = "SELECT * FROM Cuentas";
-                        using (var command = new SQLiteCommand(query, ctx))
+                        using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                         {
-                            using (var reader = command.ExecuteReader())
+                            string query = "SELECT * FROM Cuentas";
+                            using (var command = new SQLiteCommand(query, ctx))
                             {
-                                while (reader.Read())
+                                using (var reader = command.ExecuteReader())
                                 {
-                                    correos.Enqueue(reader["Correo"].ToString());
-                                    psds.Enqueue(reader["Psd"].ToString());
+                                    while (reader.Read())
+                                    {
+                                        correos.Enqueue(reader["Correo"].ToString());
+                                        psds.Enqueue(reader["Psd"].ToString());
+                                    }
                                 }
                             }
                         }
                     }
+
+                    foreach (string item in correos)
+                        if (item == correo)
+                        {
+                            boolCorreo = true;
+                            break;
+
+                        }
+                        else
+                        {
+                            valid = 2;
+                        }
+                    foreach (string item in psds)
+                        if (item == psd)
+                        {
+                            boolPsd = true;
+                            break;
+                        }
                 }
-
-                foreach (string item in correos)
-                    if (item == correo)
+                if (valid == 2)
+                {
+                    int valcorreo = 1;
+                    int valcontrasena = -1;
+                    using (var ctx = GetInstance())
                     {
-                        boolCorreo = true;
-                        break;
+                        using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                        {
+                            string query = "SELECT * FROM Cliente";
+                            using (var command = new SQLiteCommand(query, ctx))
+                            {
+                                using (var reader = command.ExecuteReader())
+                                {
+                                    while (reader.Read())
+                                    {
+                                        correos.Enqueue(reader["Correo"].ToString());
+                                        psds.Enqueue(reader["Contraseña"].ToString());
+                                    }
+                                }
+                            }
+                        }
                     }
 
-                foreach (string item in psds)
-                    if (item == psd)
-                    {
-                        boolPsd = true;
-                        break;
-                    }
+                    foreach (string item in correos)
+                        if (item == correo)
+                        {
+                            boolCorreo = true;
+                            valcorreo = 5;
+                            break;
+
+                        }
+                    foreach (string item in psds)
+                        if (item == psd)
+                        {
+                            boolPsd = true;
+                            valcontrasena = 2;
+                            if (valcorreo == 5)
+                            {
+                                return valcontrasena;
+                            }
+                            break;
+                        }
+                }
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Error");
                 throw;
             }
-
             return (boolCorreo && boolPsd) ? 1 : -1;
         }
 
