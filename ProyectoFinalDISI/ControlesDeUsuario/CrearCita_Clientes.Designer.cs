@@ -35,11 +35,9 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtespecialidad = new System.Windows.Forms.TextBox();
-            this.cbUsuario = new System.Windows.Forms.ComboBox();
             this.cbMedico = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdCitas = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -96,18 +94,16 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtespecialidad, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cbUsuario, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbMedico, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtIdCitas, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtHoraCrearCita, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbMedico, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtHoraCrearCita, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtespecialidad, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(170, 96);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -127,10 +123,10 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(4, 240);
+            this.label4.Location = new System.Drawing.Point(4, 192);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(325, 47);
+            this.label4.Size = new System.Drawing.Size(325, 48);
             this.label4.TabIndex = 28;
             this.label4.Text = "Especialidad:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -140,25 +136,11 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.txtespecialidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtespecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtespecialidad.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtespecialidad.Location = new System.Drawing.Point(337, 244);
+            this.txtespecialidad.Location = new System.Drawing.Point(337, 196);
             this.txtespecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtespecialidad.Name = "txtespecialidad";
             this.txtespecialidad.Size = new System.Drawing.Size(326, 33);
             this.txtespecialidad.TabIndex = 27;
-            // 
-            // cbUsuario
-            // 
-            this.cbUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUsuario.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUsuario.FormattingEnabled = true;
-            this.cbUsuario.Items.AddRange(new object[] {
-            "Selecciona un usuario"});
-            this.cbUsuario.Location = new System.Drawing.Point(337, 52);
-            this.cbUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.cbUsuario.Name = "cbUsuario";
-            this.cbUsuario.Size = new System.Drawing.Size(326, 34);
-            this.cbUsuario.TabIndex = 26;
             // 
             // cbMedico
             // 
@@ -168,7 +150,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.cbMedico.FormattingEnabled = true;
             this.cbMedico.Items.AddRange(new object[] {
             "Selecciona un medico"});
-            this.cbMedico.Location = new System.Drawing.Point(337, 100);
+            this.cbMedico.Location = new System.Drawing.Point(337, 52);
             this.cbMedico.Margin = new System.Windows.Forms.Padding(4);
             this.cbMedico.Name = "cbMedico";
             this.cbMedico.Size = new System.Drawing.Size(326, 34);
@@ -199,27 +181,13 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.txtIdCitas.Size = new System.Drawing.Size(326, 33);
             this.txtIdCitas.TabIndex = 7;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 48);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ID Usuario:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(4, 144);
+            this.label5.Location = new System.Drawing.Point(4, 96);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(325, 48);
@@ -233,7 +201,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(4, 192);
+            this.label7.Location = new System.Drawing.Point(4, 144);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(325, 48);
@@ -246,7 +214,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Palatino Linotype", 14.25F);
             this.dateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
-            this.dateTimePicker.Location = new System.Drawing.Point(337, 148);
+            this.dateTimePicker.Location = new System.Drawing.Point(337, 100);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(326, 26);
@@ -257,7 +225,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.txtHoraCrearCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHoraCrearCita.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtHoraCrearCita.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraCrearCita.Location = new System.Drawing.Point(337, 196);
+            this.txtHoraCrearCita.Location = new System.Drawing.Point(337, 148);
             this.txtHoraCrearCita.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraCrearCita.Name = "txtHoraCrearCita";
             this.txtHoraCrearCita.Size = new System.Drawing.Size(326, 33);
@@ -269,7 +237,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 96);
+            this.label3.Location = new System.Drawing.Point(4, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(325, 48);
@@ -302,11 +270,9 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtespecialidad;
-        private System.Windows.Forms.ComboBox cbUsuario;
         private System.Windows.Forms.ComboBox cbMedico;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIdCitas;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
