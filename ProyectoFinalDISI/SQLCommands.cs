@@ -39,107 +39,55 @@ namespace ProyectoFinalDISI
         //    Birthday = Convert.ToDateTime(reader["Birthday"]),
         //});
 
-        public static int Login(string correo, string psd)
+        public static string Login(string correo, string psd)
         {
-            int valid = 1;
-            bool boolCorreo = false, boolPsd = false;
-
-            Queue correos = new Queue(), psds = new Queue();
+            Queue<String> queueCorreos = new Queue<String>(), queuePsds = new Queue<String>(), queueTipoUsuario = new Queue<String>();
             try
             {
-                if (valid == 1)
+                using (var ctx = GetInstance())
                 {
-                    using (var ctx = GetInstance())
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                     {
-                        using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                        string query = "SELECT * FROM Cuentas";
+                        using (var command = new SQLiteCommand(query, ctx))
                         {
-                            string query = "SELECT * FROM Cuentas";
-                            using (var command = new SQLiteCommand(query, ctx))
+                            using (var reader = command.ExecuteReader())
                             {
-                                using (var reader = command.ExecuteReader())
+                                while (reader.Read())
                                 {
-                                    while (reader.Read())
-                                    {
-                                        correos.Enqueue(reader["Correo"].ToString());
-                                        psds.Enqueue(reader["Psd"].ToString());
-                                    }
+                                    queueCorreos.Enqueue(reader["Correo"].ToString());
+                                    queuePsds.Enqueue(reader["Psd"].ToString());
+                                    queueTipoUsuario.Enqueue(reader["TipoUsuario"].ToString());
                                 }
                             }
                         }
                     }
-
-                    foreach (string item in correos)
-                        if (item == correo)
-                        {
-                            boolCorreo = true;
-                            break;
-
-                        }
-                        else
-                        {
-                            valid = 2;
-                        }
-                    foreach (string item in psds)
-                        if (item == psd)
-                        {
-                            boolPsd = true;
-                            break;
-                        }
                 }
-                if (valid == 2)
+                String[] arrCorreos = queueCorreos.ToArray(), arrPsds = queuePsds.ToArray(), arrTipoUsuario = queueTipoUsuario.ToArray();
+
+                string tempCorreo, tempPsd, tipoUsuario = "Error";
+                for (int i = 0; i < arrCorreos.Length; i++)
                 {
-                    int valcorreo = 1;
-                    int valcontrasena = -1;
-                    using (var ctx = GetInstance())
+                    tempCorreo = arrCorreos[i].ToString();
+                    tempPsd = arrPsds[i].ToString();
+                    if (tempCorreo == correo && tempPsd == psd)
                     {
-                        using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
-                        {
-                            string query = "SELECT * FROM Cliente";
-                            using (var command = new SQLiteCommand(query, ctx))
-                            {
-                                using (var reader = command.ExecuteReader())
-                                {
-                                    while (reader.Read())
-                                    {
-                                        correos.Enqueue(reader["Correo"].ToString());
-                                        psds.Enqueue(reader["Contraseña"].ToString());
-                                    }
-                                }
-                            }
-                        }
+                        tipoUsuario = arrTipoUsuario[i];
+                        i = arrCorreos.Length;
                     }
-
-                    foreach (string item in correos)
-                        if (item == correo)
-                        {
-                            boolCorreo = true;
-                            valcorreo = 5;
-                            break;
-
-                        }
-                    foreach (string item in psds)
-                        if (item == psd)
-                        {
-                            boolPsd = true;
-                            valcontrasena = 2;
-                            if (valcorreo == 5)
-                            {
-                                return valcontrasena;
-                            }
-                            break;
-                        }
                 }
+
+                return tipoUsuario;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Error");
                 throw;
             }
-            return (boolCorreo && boolPsd) ? 1 : -1;
         }
 
         #region Inserciones
-        public static void InsertarEmpleado(string[] datos, int isAdmin)
+        public static void InsertarEmpleado(string[] datos)
         {
             try
             {
@@ -179,8 +127,7 @@ namespace ProyectoFinalDISI
                         cmd.CommandText = "INSERT INTO Cuentas (" +
                             "Correo, " +
                             "TipoUsuario, " +
-                            "Psd, " +
-                            "isAdmin) VALUES('" + datos[6] + "', '" + datos[8] + "', '" + datos[7] + "', "  + isAdmin + ");";
+                            "Psd) VALUES('" + datos[6] + "', '" + datos[8] + "', '" + datos[7] + "');";
                         cmd.ExecuteNonQuery();
 
                         cmd.Dispose();

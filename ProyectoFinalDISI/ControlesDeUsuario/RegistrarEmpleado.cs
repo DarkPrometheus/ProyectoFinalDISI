@@ -55,6 +55,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
                 password = txtPassword.Text != "" && txtPassword.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[5];
             if (especialidad && apellidoPaterno && apellidoMaterno && nombre && genero && correo && password)
             {
+                string isAdmin = (checkBox1.Checked == true) ? "Admin" : "Empleado";
                 SQLCommands.InsertarEmpleado(
                     new string[]{
                         cbEspecialidades.Text,
@@ -65,9 +66,8 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
                         dateTimePicker.Text,
                         txtCorreo.Text,
                         txtPassword.Text,
-                        "Empleado"
-                        },
-                        (checkBox1.Checked == true) ? 1 : -1);
+                        isAdmin
+                        });
 
                 cbEspecialidades.SelectedItem = cbEspecialidades.Items[0];
                 txtApellidoPaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[1];

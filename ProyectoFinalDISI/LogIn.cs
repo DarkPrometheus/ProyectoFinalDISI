@@ -23,35 +23,31 @@ namespace ProyectoFinalDISI
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             // Dependiento de que tipo de usuario se redirecciona al correspondiente
-            //int usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
-            //if (usuario != -1)
-            //{
-            //    if (usuario == 1)
-            //    {
-            //        Hide();
-            //        Pantallas_principales.Dashboard dashboard = new Pantallas_principales.Dashboard();
-            //        dashboard.Show();
-
-            //    }
-            //    else
-            //        if (usuario == 2)
-            //    {
-            //        Hide();
-            //        PantallasPrincipales.DashboardCliente dashboard = new PantallasPrincipales.DashboardCliente();
-            //        dashboard.Show();
-            //    }
-
-            //}
-            //else
-            //{
-            //    txtEmail.Clear();
-            //    txtPassword.Clear();
-            //    txtEmail.Focus();
-            //    MessageBox.Show("Usuario o contraseña incorrecto", "Error");
-            //}
-            Hide();
-            Pantallas_principales.Dashboard dashboard = new Pantallas_principales.Dashboard();
-            dashboard.Show();
+            string usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
+            if (usuario != "Error")
+            {
+                Hide();
+                if (usuario == "Admin")
+                {
+                    Pantallas_principales.Dashboard dashboardAdmin = new Pantallas_principales.Dashboard();
+                    dashboardAdmin.Show();
+                }
+                else if (usuario == "Empleado")
+                {
+                    PantallasPrincipales.DashboardEmpleados dashboardEmpleados = new PantallasPrincipales.DashboardEmpleados();
+                    dashboardEmpleados.Show();
+                }
+                else if (usuario == "Cliente")
+                {
+                    PantallasPrincipales.DashboardCliente dashboardCliente = new PantallasPrincipales.DashboardCliente();
+                    dashboardCliente.Show();
+                }
+                txtEmail.Clear();
+                txtPassword.Clear();
+                txtEmail.Focus();
+            }
+            else
+                MessageBox.Show("Usuario o contraseña incorrecto", "Error");
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)

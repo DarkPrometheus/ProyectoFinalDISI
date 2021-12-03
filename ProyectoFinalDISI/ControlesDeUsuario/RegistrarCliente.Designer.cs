@@ -57,7 +57,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(324, 64);
+            this.label6.Size = new System.Drawing.Size(323, 64);
             this.label6.TabIndex = 2;
             this.label6.Text = "Cliente nuevo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
