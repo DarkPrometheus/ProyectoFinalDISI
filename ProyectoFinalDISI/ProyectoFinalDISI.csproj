@@ -124,6 +124,12 @@
     <Compile Include="PantallasPrincipales\DashboardCliente.Designer.cs">
       <DependentUpon>DashboardCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasPrincipales\DashboardEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasPrincipales\DashboardEmpleados.Designer.cs">
+      <DependentUpon>DashboardEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLCommands.cs" />
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasPrincipales\DashboardCliente.resx">
       <DependentUpon>DashboardCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasPrincipales\DashboardEmpleados.resx">
+      <DependentUpon>DashboardEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
