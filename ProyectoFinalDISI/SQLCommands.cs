@@ -14,8 +14,8 @@ namespace ProyectoFinalDISI
     {
         // La base de datos ahora se llama "ProyectoFinal"
         //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
-        private const string rutaBDD = @"C:\Users\Briseño\Documents\ProyectoFinal";
-        //private const string rutaBDD = @"C:\Users\Emmanuel\Documents\PuntoVenta";
+        //private const string rutaBDD = @"C:\Users\Briseño\Documents\ProyectoFinal";
+        private const string rutaBDD = @"C:\Users\Emmanuel\Desktop\Clases universidad\9no\Desarrollo e Implementación de Sistemas de Información\ProyectoFinalDISI\ProyectoFinal";
         public static SQLiteConnection GetInstance()
         {
             // Devuelve una instancia de la base de datos
@@ -139,39 +139,53 @@ namespace ProyectoFinalDISI
         }
 
         #region Inserciones
-        public static void InsertarEmpleado(string[] datos)
+        public static void InsertarEmpleado(string[] datos, int isAdmin)
         {
-          try
+            try
             {
                 using (var ctx = GetInstance())
-             {
-                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                 {
-                    Conexion.Open();
-                    SQLiteCommand cmd = Conexion.CreateCommand();
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
 
-                    cmd.CommandText = "INSERT INTO Empleado (" +
-                        "Especialidad, " +
-                        "ApellidoPaterno, " +
-                        "ApellidoMaterno, " +
-                        "NombreEmpleado, " +
-                        "Genero, " +
-                        "FechaNacimiento, " +
-                        "Correo, " +
-                        "Contraseña) VALUES(" +
-                        "'" + datos[0] + "', " +
-                        "'" + datos[1] + "', " +
-                        "'" + datos[2] + "', " +
-                        "'" + datos[3] + "', " +
-                        "'" + datos[4] + "', " +
-                        "'" + datos[5] + "', " +
-                        "'" + datos[6] + "', " +
-                        "'" + datos[7] + "');";
-                    cmd.ExecuteNonQuery();
+                        cmd.CommandText = "INSERT INTO Empleado (" +
+                            "Especialidad, " +
+                            "ApellidoPaterno, " +
+                            "ApellidoMaterno, " +
+                            "NombreEmpleado, " +
+                            "Genero, " +
+                            "FechaNacimiento, " +
+                            "Correo, " +
+                            "Contraseña) VALUES(" +
+                            "'" + datos[0] + "', " +
+                            "'" + datos[1] + "', " +
+                            "'" + datos[2] + "', " +
+                            "'" + datos[3] + "', " +
+                            "'" + datos[4] + "', " +
+                            "'" + datos[5] + "', " +
+                            "'" + datos[6] + "', " +
+                            "'" + datos[7] + "');";
+                        cmd.ExecuteNonQuery();
 
-                    cmd.Dispose();
+                        cmd.Dispose();
+                    }
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
+
+                        cmd.CommandText = "INSERT INTO Cuentas (" +
+                            "Correo, " +
+                            "TipoUsuario, " +
+                            "Psd, " +
+                            "isAdmin) VALUES('" + datos[6] + "', '" + datos[8] + "', '" + datos[7] + "', "  + isAdmin + ");";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
                 }
-             }
                 MessageBox.Show("Se ha ingresado " + datos[3] + " correctamente", "Sin errores");
             }
 
@@ -323,7 +337,7 @@ namespace ProyectoFinalDISI
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "No se encontro la especialidad");
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
                 throw;
             }
 

@@ -17,6 +17,8 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             InitializeComponent();
 
+            cbEspecialidades.SelectedItem = cbEspecialidades.Items[0];
+            cbGenero.SelectedItem = cbGenero.Items[0];
 
             txtApellidoPaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[1];
             txtApellidoPaterno.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
@@ -42,31 +44,42 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
                 cbEspecialidades.Items.Add(item);
         }
 
-        private void RegistrarEmpleado_Load(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Queue Especialidades = SQLCommands.GetEspecialidades();
+            bool especialidad = cbEspecialidades.Text != "Selecciona una especialidad", 
+                apellidoPaterno = txtApellidoPaterno.Text != "" && txtApellidoPaterno.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[1],
+                apellidoMaterno = txtApellidoMaterno.Text != "" && txtApellidoMaterno.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[2],
+                nombre = txtNombre.Text != "" && txtNombre.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[3],
+                genero = cbGenero.Text != "Seleciona un genero",
+                correo = txtCorreo.Text != "" && txtCorreo.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[4],
+                password = txtPassword.Text != "" && txtPassword.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[5];
+            if (especialidad && apellidoPaterno && apellidoMaterno && nombre && genero && correo && password)
+            {
+                SQLCommands.InsertarEmpleado(
+                    new string[]{
+                        cbEspecialidades.Text,
+                        txtApellidoPaterno.Text,
+                        txtApellidoMaterno.Text,
+                        txtNombre.Text,
+                        cbGenero.Text,
+                        dateTimePicker.Text,
+                        txtCorreo.Text,
+                        txtPassword.Text,
+                        "Empleado"
+                        },
+                        (checkBox1.Checked == true) ? 1 : -1);
 
-
-
+                cbEspecialidades.SelectedItem = cbEspecialidades.Items[0];
+                txtApellidoPaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[1];
+                txtApellidoMaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[2];
+                txtNombre.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[3];
+                cbGenero.SelectedItem = cbGenero.Items[0];
+                dateTimePicker.Value = DateTime.Now;
+                txtCorreo.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[4];
+                txtPassword.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[5];
+            }
+            else
+                MessageBox.Show("Fantan datos por ingresar", "Falta datos");
         }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
-    SQLCommands.InsertarEmpleado(new string[]{cbEspecialidades.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, txtNombre.Text, cbGenero.Text, dateTimePicker.Text, txtCorreo.Text, txtPassword.Text });
-
-        }
-
-        private void cbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbEspecialidades_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        // TODO: Registrar en la base de datos el empleado nuevo
     }
 }
