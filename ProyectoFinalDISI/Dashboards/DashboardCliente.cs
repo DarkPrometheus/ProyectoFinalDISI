@@ -33,7 +33,6 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             DesplegarPantalla("Salir");
         }
 
-
         void DesplegarPantalla(string pantalla)
         {   // Metodo para desplegar las distintas pantallas principales de la aplicacion
             plMain.Controls.Clear();

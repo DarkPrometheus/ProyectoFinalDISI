@@ -16,5 +16,11 @@ namespace ProyectoFinalDISI.PantallasPrincipales
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+            LogIn.instance.Show();
+        }
     }
 }

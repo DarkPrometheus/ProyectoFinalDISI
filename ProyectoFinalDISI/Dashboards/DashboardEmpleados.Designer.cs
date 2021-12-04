@@ -62,19 +62,17 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.plMenu.Controls.Add(this.btnRegistrarCliente);
             this.plMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.plMenu.Location = new System.Drawing.Point(0, 0);
-            this.plMenu.Margin = new System.Windows.Forms.Padding(4);
             this.plMenu.Name = "plMenu";
-            this.plMenu.Size = new System.Drawing.Size(300, 554);
+            this.plMenu.Size = new System.Drawing.Size(225, 450);
             this.plMenu.TabIndex = 2;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 226);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 184);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox5.Size = new System.Drawing.Size(35, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
@@ -83,10 +81,9 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 177);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 144);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
@@ -95,10 +92,9 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(4, 133);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 108);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
@@ -108,18 +104,16 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(72, 80);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUser.Location = new System.Drawing.Point(54, 65);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(103, 27);
+            this.lblUser.Size = new System.Drawing.Size(79, 22);
             this.lblUser.TabIndex = 6;
             this.lblUser.Text = "Empleado";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(109, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(82, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -132,13 +126,13 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(4, 518);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(3, 421);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(99, 32);
+            this.btnSalir.Size = new System.Drawing.Size(74, 26);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnConsultarCitas
             // 
@@ -146,10 +140,9 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnConsultarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCitas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 222);
-            this.btnConsultarCitas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 180);
             this.btnConsultarCitas.Name = "btnConsultarCitas";
-            this.btnConsultarCitas.Size = new System.Drawing.Size(247, 50);
+            this.btnConsultarCitas.Size = new System.Drawing.Size(185, 41);
             this.btnConsultarCitas.TabIndex = 0;
             this.btnConsultarCitas.Text = "         Consultar citas";
             this.btnConsultarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,10 +154,9 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnCrearCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCrearCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCrearCitas.Location = new System.Drawing.Point(0, 173);
-            this.btnCrearCitas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrearCitas.Location = new System.Drawing.Point(0, 141);
             this.btnCrearCitas.Name = "btnCrearCitas";
-            this.btnCrearCitas.Size = new System.Drawing.Size(247, 50);
+            this.btnCrearCitas.Size = new System.Drawing.Size(185, 41);
             this.btnCrearCitas.TabIndex = 0;
             this.btnCrearCitas.Text = "         Crear cita";
             this.btnCrearCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,10 +168,9 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrarCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarCliente.Location = new System.Drawing.Point(0, 130);
-            this.btnRegistrarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrarCliente.Location = new System.Drawing.Point(0, 106);
             this.btnRegistrarCliente.Name = "btnRegistrarCliente";
-            this.btnRegistrarCliente.Size = new System.Drawing.Size(247, 50);
+            this.btnRegistrarCliente.Size = new System.Drawing.Size(185, 41);
             this.btnRegistrarCliente.TabIndex = 0;
             this.btnRegistrarCliente.Text = "         Registrar cliente";
             this.btnRegistrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,20 +180,20 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.plMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.plMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plMain.Location = new System.Drawing.Point(300, 0);
-            this.plMain.Margin = new System.Windows.Forms.Padding(4);
+            this.plMain.Location = new System.Drawing.Point(225, 0);
             this.plMain.Name = "plMain";
-            this.plMain.Size = new System.Drawing.Size(1007, 554);
+            this.plMain.Size = new System.Drawing.Size(755, 450);
             this.plMain.TabIndex = 3;
             // 
             // DashboardEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 554);
+            this.ClientSize = new System.Drawing.Size(980, 450);
             this.Controls.Add(this.plMain);
             this.Controls.Add(this.plMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DashboardEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardEmpleados";
