@@ -40,6 +40,9 @@ namespace ProyectoFinalDISI
         //    Birthday = Convert.ToDateTime(reader["Birthday"]),
         //});
 
+
+   
+
         public static string Login(string correo, string psd)
         {
             Queue<String> queueCorreos = new Queue<String>(), queuePsds = new Queue<String>(), queueTipoUsuario = new Queue<String>();
@@ -291,7 +294,7 @@ namespace ProyectoFinalDISI
 
             return Datos;
         }
-
+        
         public static Queue GetEspecialidadEmpleado(string medico)
         {
             Queue Datos = new Queue();
@@ -307,7 +310,7 @@ namespace ProyectoFinalDISI
                             using (var reader = command.ExecuteReader())
                             {
                                 while (reader.Read())
-                                    Datos.Enqueue(reader["NombreEmpleado"].ToString());
+                                    Datos.Enqueue(reader["Especialidad"].ToString());
                             }
                         }
                     }
@@ -322,7 +325,7 @@ namespace ProyectoFinalDISI
             return Datos;
         }
 
-
+       
         public static Queue GetIDUsuario()
         {
             Queue Datos = new Queue();

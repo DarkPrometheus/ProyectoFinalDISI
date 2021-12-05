@@ -27,7 +27,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             SQLCommands.GetUsuarioCitasAdmin(GridCitas, cbUsuario.Text);
 
-            cbUsuario.Items.Clear();
+     
             MessageBox.Show("Consulta Realizada");
         }
 

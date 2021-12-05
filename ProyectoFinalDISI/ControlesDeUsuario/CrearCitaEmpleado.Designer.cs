@@ -42,6 +42,8 @@
             this.txtHoraCrearCita = new System.Windows.Forms.TextBox();
             this.plTitle = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
+            this.cbMedico = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.plTitle.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +137,7 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "ID Cita:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtIdCitas
             // 
@@ -231,21 +234,49 @@
             this.label6.Text = "Crear citas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cbMedico
+            // 
+            this.cbMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMedico.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMedico.FormattingEnabled = true;
+            this.cbMedico.Items.AddRange(new object[] {
+            "Selecciona un usuario"});
+            this.cbMedico.Location = new System.Drawing.Point(403, 112);
+            this.cbMedico.Name = "cbMedico";
+            this.cbMedico.Size = new System.Drawing.Size(244, 28);
+            this.cbMedico.TabIndex = 33;
+            this.cbMedico.SelectedIndexChanged += new System.EventHandler(this.cbMedico_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(305, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 28);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Medico";
+            // 
             // CrearCitaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbMedico);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.plTitle);
             this.Name = "CrearCitaEmpleado";
             this.Size = new System.Drawing.Size(755, 450);
+            this.Load += new System.EventHandler(this.CrearCitaEmpleado_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.plTitle.ResumeLayout(false);
             this.plTitle.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -265,5 +296,7 @@
         private System.Windows.Forms.TextBox txtHoraCrearCita;
         private System.Windows.Forms.TableLayoutPanel plTitle;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbMedico;
+        private System.Windows.Forms.Label label3;
     }
 }

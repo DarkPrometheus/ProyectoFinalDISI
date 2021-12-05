@@ -15,9 +15,25 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         public CrearCitaEmpleado()
         {
             InitializeComponent();
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearCitaEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbMedico_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

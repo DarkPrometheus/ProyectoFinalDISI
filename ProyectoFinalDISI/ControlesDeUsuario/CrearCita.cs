@@ -54,6 +54,11 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         private void cbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private void cbMedico_SelectedIndexChanged(object sender, EventArgs e)
+        {
             foreach (var item in SQLCommands.GetEspecialidadEmpleado(cbMedico.Text))
                 cbEspecialidad.Items.Add(item);
         }

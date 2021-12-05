@@ -20,7 +20,7 @@ namespace ProyectoFinalDISI
             instance = this;
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
+        public void btnLogIn_Click(object sender, EventArgs e)
         {
             // Dependiento de que tipo de usuario se redirecciona al correspondiente
             string usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
@@ -36,6 +36,7 @@ namespace ProyectoFinalDISI
                 {
                     PantallasPrincipales.DashboardEmpleados dashboardEmpleados = new PantallasPrincipales.DashboardEmpleados();
                     dashboardEmpleados.Show();
+
                 }
                 else if (usuario == "Cliente")
                 {

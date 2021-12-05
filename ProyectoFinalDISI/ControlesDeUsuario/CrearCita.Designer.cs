@@ -32,6 +32,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdCitas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbUsuario = new System.Windows.Forms.ComboBox();
-            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.plTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +117,32 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 180);
             this.tableLayoutPanel1.TabIndex = 31;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(244, 35);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Especialidad:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbEspecialidad
+            // 
+            this.cbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEspecialidad.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEspecialidad.FormattingEnabled = true;
+            this.cbEspecialidad.Items.AddRange(new object[] {
+            "Selecciona un medico"});
+            this.cbEspecialidad.Location = new System.Drawing.Point(253, 148);
+            this.cbEspecialidad.Name = "cbEspecialidad";
+            this.cbEspecialidad.Size = new System.Drawing.Size(244, 28);
+            this.cbEspecialidad.TabIndex = 29;
+            this.cbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbEspecialidad_SelectedIndexChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -164,6 +190,7 @@
             this.cbMedico.Name = "cbMedico";
             this.cbMedico.Size = new System.Drawing.Size(244, 28);
             this.cbMedico.TabIndex = 25;
+            this.cbMedico.SelectedIndexChanged += new System.EventHandler(this.cbMedico_SelectedIndexChanged);
             // 
             // txtHoraCrearCita
             // 
@@ -234,32 +261,6 @@
             this.cbUsuario.Size = new System.Drawing.Size(244, 28);
             this.cbUsuario.TabIndex = 25;
             this.cbUsuario.SelectedIndexChanged += new System.EventHandler(this.cbUsuario_SelectedIndexChanged);
-            // 
-            // cbEspecialidad
-            // 
-            this.cbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEspecialidad.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Items.AddRange(new object[] {
-            "Selecciona un medico"});
-            this.cbEspecialidad.Location = new System.Drawing.Point(253, 148);
-            this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(244, 28);
-            this.cbEspecialidad.TabIndex = 29;
-            this.cbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbEspecialidad_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 35);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Especialidad:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CrearCita
             // 
