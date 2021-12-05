@@ -7,15 +7,16 @@ using System.Data.SQLite;
 using System.Collections;
 using System.Windows.Forms;
 using System.IO;
+using System.Data;
 
 namespace ProyectoFinalDISI
 {
     internal class SQLCommands
     {
         // La base de datos ahora se llama "ProyectoFinal"
-        //private const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
+        public const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
         //private const string rutaBDD = @"C:\Users\Briseño\Documents\ProyectoFinal";
-        private const string rutaBDD = @"C:\Users\Emmanuel\Desktop\Clases universidad\9no\Desarrollo e Implementación de Sistemas de Información\ProyectoFinalDISI\ProyectoFinal";
+        ///private const string rutaBDD = @"C:\Users\Emmanuel\Desktop\Clases universidad\9no\Desarrollo e Implementación de Sistemas de Información\ProyectoFinalDISI\ProyectoFinal";
         public static SQLiteConnection GetInstance()
         {
             // Devuelve una instancia de la base de datos
@@ -291,6 +292,36 @@ namespace ProyectoFinalDISI
             return Datos;
         }
 
+        public static Queue GetEspecialidadEmpleado(string medico)
+        {
+            Queue Datos = new Queue();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT * FROM Empleado where NombreEmpleado= '" + medico + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    Datos.Enqueue(reader["NombreEmpleado"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+
+            return Datos;
+        }
+
 
         public static Queue GetIDUsuario()
         {
@@ -354,7 +385,91 @@ namespace ProyectoFinalDISI
 
 
 
+        public static void  GetTodasCitasAdmin(DataGridView grid)
+        {
 
+
+           
+            try
+            {
+ 
+                  using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD)) 
+                    { 
+                Conexion.Open(); 
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From Cita",Conexion);  
+                DataSet dset = new DataSet();
+                adapter.Fill(dset, "info");
+                grid.DataSource = dset.Tables[0];
+                Conexion.Close();
+                    }
+             
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar ls citas");
+                throw;
+            }
+
+
+        }
+
+
+        public static void GetUsuarioCitasAdmin(DataGridView grid,string Usuario)
+        {
+
+
+
+            try
+            {
+
+                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                {
+                    Conexion.Open();
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From Cita Where Usuario='" + Usuario + "'", Conexion);
+                    DataSet dset = new DataSet();
+                    adapter.Fill(dset, "info");
+                    grid.DataSource = dset.Tables[0];
+                    Conexion.Close();
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar ls citas");
+                throw;
+            }
+
+
+        }
+
+
+        public static void GetIDCitasAdmin(DataGridView grid, string id)
+        {
+
+
+
+            try
+            {
+
+                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                {
+                    Conexion.Open();
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From Cita Where id_cita='" + id + "'", Conexion);
+                    DataSet dset = new DataSet();
+                    adapter.Fill(dset, "info");
+                    grid.DataSource = dset.Tables[0];
+                    Conexion.Close();
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar ls citas");
+                throw;
+            }
+
+
+        }
         #endregion
     }
 }

@@ -58,6 +58,7 @@
             this.btnRegistrar.TabIndex = 31;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // tableLayoutPanel1
             // 

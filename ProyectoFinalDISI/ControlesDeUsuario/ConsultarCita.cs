@@ -16,10 +16,37 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             // TODO: Colocar placesholders
             InitializeComponent();
+            foreach (var item in SQLCommands.GetIDUsuario())
+                cbUsuario.Items.Add(item);
+
         }
+
+       
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            SQLCommands.GetUsuarioCitasAdmin(GridCitas, cbUsuario.Text);
+
+            cbUsuario.Items.Clear();
+            MessageBox.Show("Consulta Realizada");
+        }
+
+        private void ConsultarCita_Load(object sender, EventArgs e)
+        {
+            SQLCommands.GetTodasCitasAdmin(GridCitas);
+        
+        }
+
+        private void BtnConsultarID_Click(object sender, EventArgs e)
+        {
+            SQLCommands.GetIDCitasAdmin(GridCitas, txtIdCitas.Text);
+            txtIdCitas.Clear();
+            MessageBox.Show("Consulta Realizada");
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            SQLCommands.GetTodasCitasAdmin(GridCitas);
 
         }
     }

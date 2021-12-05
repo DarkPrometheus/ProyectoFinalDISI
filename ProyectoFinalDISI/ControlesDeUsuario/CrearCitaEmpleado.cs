@@ -16,5 +16,10 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             InitializeComponent();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

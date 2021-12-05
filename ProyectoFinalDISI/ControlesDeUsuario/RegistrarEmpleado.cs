@@ -81,5 +81,10 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             else
                 MessageBox.Show("Fantan datos por ingresar", "Falta datos");
         }
+
+        private void RegistrarEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,11 +33,29 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
 
             foreach (var item in SQLCommands.GetNombreEmpleado())
                 cbMedico.Items.Add(item);
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            SQLCommands.InsertarCita(new string[] { txtIdCitas.Text,txtespecialidad.Text, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, txtHoraCrearCita.Text });
+            SQLCommands.InsertarCita(new string[] { txtIdCitas.Text,cbEspecialidad.Text, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, txtHoraCrearCita.Text });
+        }
+
+        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearCita_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            foreach (var item in SQLCommands.GetEspecialidadEmpleado(cbMedico.Text))
+                cbEspecialidad.Items.Add(item);
         }
 
         // TODO: Registrar en la base de datos la cita nueva

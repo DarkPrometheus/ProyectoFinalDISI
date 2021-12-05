@@ -36,11 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.plTitle = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnConsultarUsuario = new System.Windows.Forms.Button();
+            this.GridCitas = new System.Windows.Forms.DataGridView();
+            this.BtnConsultarID = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.plTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCitas)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -51,7 +53,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(337, 64);
+            this.label6.Size = new System.Drawing.Size(338, 64);
             this.label6.TabIndex = 3;
             this.label6.Text = "Consultar Cita";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,7 +125,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 30);
             this.label1.TabIndex = 5;
-            this.label1.Text = "ID Usuario:";
+            this.label1.Text = "Usuario:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // plTitle
@@ -152,47 +154,78 @@
             this.label4.Text = "Consultar citas";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnConsultar
+            // btnConsultarUsuario
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(576, 98);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(90, 30);
-            this.btnConsultar.TabIndex = 29;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnConsultarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarUsuario.Location = new System.Drawing.Point(547, 115);
+            this.btnConsultarUsuario.Name = "btnConsultarUsuario";
+            this.btnConsultarUsuario.Size = new System.Drawing.Size(90, 30);
+            this.btnConsultarUsuario.TabIndex = 29;
+            this.btnConsultarUsuario.Text = "Consultar";
+            this.btnConsultarUsuario.UseVisualStyleBackColor = false;
+            this.btnConsultarUsuario.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // dataGridView1
+            // GridCitas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(82, 157);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(598, 263);
-            this.dataGridView1.TabIndex = 30;
+            this.GridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridCitas.Location = new System.Drawing.Point(93, 185);
+            this.GridCitas.Margin = new System.Windows.Forms.Padding(2);
+            this.GridCitas.Name = "GridCitas";
+            this.GridCitas.RowHeadersWidth = 51;
+            this.GridCitas.Size = new System.Drawing.Size(598, 263);
+            this.GridCitas.TabIndex = 30;
+            // 
+            // BtnConsultarID
+            // 
+            this.BtnConsultarID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BtnConsultarID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnConsultarID.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConsultarID.ForeColor = System.Drawing.Color.White;
+            this.BtnConsultarID.Location = new System.Drawing.Point(547, 84);
+            this.BtnConsultarID.Name = "BtnConsultarID";
+            this.BtnConsultarID.Size = new System.Drawing.Size(90, 30);
+            this.BtnConsultarID.TabIndex = 31;
+            this.BtnConsultarID.Text = "Consultar";
+            this.BtnConsultarID.UseVisualStyleBackColor = false;
+            this.BtnConsultarID.Click += new System.EventHandler(this.BtnConsultarID_Click);
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnActualizar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.BtnActualizar.Location = new System.Drawing.Point(14, 150);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(90, 30);
+            this.BtnActualizar.TabIndex = 32;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // ConsultarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.BtnActualizar);
+            this.Controls.Add(this.BtnConsultarID);
+            this.Controls.Add(this.GridCitas);
+            this.Controls.Add(this.btnConsultarUsuario);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.plTitle);
             this.Controls.Add(this.label6);
             this.Name = "ConsultarCita";
             this.Size = new System.Drawing.Size(755, 450);
+            this.Load += new System.EventHandler(this.ConsultarCita_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.plTitle.ResumeLayout(false);
             this.plTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +241,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel plTitle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnConsultarUsuario;
+        private System.Windows.Forms.DataGridView GridCitas;
+        private System.Windows.Forms.Button BtnConsultarID;
+        private System.Windows.Forms.Button BtnActualizar;
     }
 }
