@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalDISI.ControlesDeUsuario
 {
-    public partial class CrearCita_Clientes : UserControl
+    public partial class CrearCitaCliente : UserControl
     {
-        public CrearCita_Clientes()
+        public CrearCitaCliente()
         {
             InitializeComponent();
         }

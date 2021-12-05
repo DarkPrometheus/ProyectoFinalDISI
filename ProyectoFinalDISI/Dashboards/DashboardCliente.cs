@@ -43,13 +43,13 @@ namespace ProyectoFinalDISI.PantallasPrincipales
                
                 case "CrearCitas":
                     btnCrearCitas.Width = widthBoton;
-                    ControlesDeUsuario.CrearCita crearCita = new ControlesDeUsuario.CrearCita();
+                    ControlesDeUsuario.CrearCitaCliente crearCita = new ControlesDeUsuario.CrearCitaCliente();
                     crearCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(crearCita);
                     break;
                 case "ConsultarCita":
                     btnConsultarCitas.Width = widthBoton;
-                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita();
+                    ControlesDeUsuario.ConsultarCita__Clientes consultarCita = new ControlesDeUsuario.ConsultarCita__Clientes();
                     consultarCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(consultarCita);
                     break;

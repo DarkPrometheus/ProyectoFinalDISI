@@ -70,7 +70,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 184);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 190);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(35, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,7 +81,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 144);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 149);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -104,7 +104,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(54, 65);
+            this.lblUser.Location = new System.Drawing.Point(67, 65);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(79, 22);
             this.lblUser.TabIndex = 6;
@@ -140,13 +140,14 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnConsultarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCitas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 180);
+            this.btnConsultarCitas.Location = new System.Drawing.Point(0, 186);
             this.btnConsultarCitas.Name = "btnConsultarCitas";
             this.btnConsultarCitas.Size = new System.Drawing.Size(185, 41);
             this.btnConsultarCitas.TabIndex = 0;
             this.btnConsultarCitas.Text = "         Consultar citas";
             this.btnConsultarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCitas.UseVisualStyleBackColor = false;
+            this.btnConsultarCitas.Click += new System.EventHandler(this.btnConsultarCitas_Click);
             // 
             // btnCrearCitas
             // 
@@ -154,13 +155,14 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnCrearCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCrearCitas.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCrearCitas.Location = new System.Drawing.Point(0, 141);
+            this.btnCrearCitas.Location = new System.Drawing.Point(0, 146);
             this.btnCrearCitas.Name = "btnCrearCitas";
             this.btnCrearCitas.Size = new System.Drawing.Size(185, 41);
             this.btnCrearCitas.TabIndex = 0;
             this.btnCrearCitas.Text = "         Crear cita";
             this.btnCrearCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearCitas.UseVisualStyleBackColor = false;
+            this.btnCrearCitas.Click += new System.EventHandler(this.btnCrearCitas_Click);
             // 
             // btnRegistrarCliente
             // 
@@ -175,6 +177,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.btnRegistrarCliente.Text = "         Registrar cliente";
             this.btnRegistrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarCliente.UseVisualStyleBackColor = false;
+            this.btnRegistrarCliente.Click += new System.EventHandler(this.btnRegistrarCliente_Click);
             // 
             // plMain
             // 
@@ -193,7 +196,7 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             this.Controls.Add(this.plMain);
             this.Controls.Add(this.plMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DashboardEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardEmpleados";

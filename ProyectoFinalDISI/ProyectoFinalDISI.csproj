@@ -52,17 +52,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassPlaceholders.cs" />
-    <Compile Include="ControlesDeUsuario\ConsultarCita _Clientes.cs">
+    <Compile Include="ControlesDeUsuario\ConsultarCitaCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlesDeUsuario\ConsultarCita _Clientes.Designer.cs">
-      <DependentUpon>ConsultarCita _Clientes.cs</DependentUpon>
+    <Compile Include="ControlesDeUsuario\ConsultarCitaCliente.Designer.cs">
+      <DependentUpon>ConsultarCitaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlesDeUsuario\CrearCita_Clientes.cs">
+    <Compile Include="ControlesDeUsuario\CrearCitaCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlesDeUsuario\CrearCita_Clientes.Designer.cs">
-      <DependentUpon>CrearCita_Clientes.cs</DependentUpon>
+    <Compile Include="ControlesDeUsuario\CrearCitaCliente.Designer.cs">
+      <DependentUpon>CrearCitaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CrearCitaEmpleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CrearCitaEmpleado.Designer.cs">
+      <DependentUpon>CrearCitaEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlesDeUsuario\ConsultarCita.cs">
       <SubType>UserControl</SubType>
@@ -133,11 +139,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLCommands.cs" />
-    <EmbeddedResource Include="ControlesDeUsuario\ConsultarCita _Clientes.resx">
-      <DependentUpon>ConsultarCita _Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="ControlesDeUsuario\ConsultarCitaCliente.resx">
+      <DependentUpon>ConsultarCitaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlesDeUsuario\CrearCita_Clientes.resx">
-      <DependentUpon>CrearCita_Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="ControlesDeUsuario\CrearCitaCliente.resx">
+      <DependentUpon>CrearCitaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CrearCitaEmpleado.resx">
+      <DependentUpon>CrearCitaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\ConsultarCita.resx">
       <DependentUpon>ConsultarCita.cs</DependentUpon>

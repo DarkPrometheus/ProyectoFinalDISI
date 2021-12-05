@@ -127,7 +127,5 @@ namespace ProyectoFinalDISI.Pantallas_principales
             btnHorarioNuevo.Width = width;
            
         }
-
-      
     }
 }

@@ -86,7 +86,7 @@
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(3, 305);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 25);
+            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
@@ -267,7 +267,7 @@
             this.btnHorarioNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHorarioNuevo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorarioNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnHorarioNuevo.Location = new System.Drawing.Point(0, 296);
+            this.btnHorarioNuevo.Location = new System.Drawing.Point(0, 301);
             this.btnHorarioNuevo.Name = "btnHorarioNuevo";
             this.btnHorarioNuevo.Size = new System.Drawing.Size(185, 41);
             this.btnHorarioNuevo.TabIndex = 8;
