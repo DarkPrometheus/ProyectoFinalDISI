@@ -44,7 +44,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(113, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(355, 64);
+            this.label6.Size = new System.Drawing.Size(356, 64);
             this.label6.TabIndex = 3;
             this.label6.Text = "Inicio de sesion";
             // 
@@ -134,6 +134,7 @@
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -265,6 +265,7 @@
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(219, 28);
             this.cbGenero.TabIndex = 21;
+            this.cbGenero.SelectedIndexChanged += new System.EventHandler(this.cbGenero_SelectedIndexChanged);
             // 
             // txtCorreo
             // 

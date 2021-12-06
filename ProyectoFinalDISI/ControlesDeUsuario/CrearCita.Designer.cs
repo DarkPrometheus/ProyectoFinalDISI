@@ -136,7 +136,7 @@
             this.cbEspecialidad.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Items.AddRange(new object[] {
-            "Selecciona un medico"});
+            "Selecciona una Especialidad"});
             this.cbEspecialidad.Location = new System.Drawing.Point(253, 148);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(244, 28);

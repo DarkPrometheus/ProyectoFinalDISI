@@ -124,6 +124,7 @@
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Size = new System.Drawing.Size(244, 28);
             this.cbUsuario.TabIndex = 26;
+            this.cbUsuario.SelectedIndexChanged += new System.EventHandler(this.cbUsuario_SelectedIndexChanged);
             // 
             // label2
             // 

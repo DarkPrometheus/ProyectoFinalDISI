@@ -16,6 +16,8 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
             // TODO: Colocar placeholders
             InitializeComponent();
+            foreach (var item in SQLCommands.GetNombreEmpleado())
+                cbMedico.Items.Add(item);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

@@ -40,8 +40,8 @@ namespace ProyectoFinalDISI
         //    Birthday = Convert.ToDateTime(reader["Birthday"]),
         //});
 
-
    
+      
 
         public static string Login(string correo, string psd)
         {
@@ -386,7 +386,36 @@ namespace ProyectoFinalDISI
             return Datos;
         }
 
+        public static Queue GetNombreEmpleadoLogin(string correo)
+        {
+           
+            Queue Datos = new Queue();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT Correo FROM Empleado";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    Datos.Enqueue(reader["NombreEmpleado"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "No se encontro el medico");
+                throw;
+            }
 
+            return Datos;
+        }
 
         public static void  GetTodasCitasAdmin(DataGridView grid)
         {

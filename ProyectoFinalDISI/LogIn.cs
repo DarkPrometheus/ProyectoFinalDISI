@@ -20,6 +20,11 @@ namespace ProyectoFinalDISI
             instance = this;
         }
 
+
+   
+
+
+
         public void btnLogIn_Click(object sender, EventArgs e)
         {
             // Dependiento de que tipo de usuario se redirecciona al correspondiente
@@ -52,6 +57,11 @@ namespace ProyectoFinalDISI
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
         {
 
         }

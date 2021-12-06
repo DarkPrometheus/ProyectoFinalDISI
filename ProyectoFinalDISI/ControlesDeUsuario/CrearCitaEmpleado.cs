@@ -37,5 +37,10 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
 
         }
+
+        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

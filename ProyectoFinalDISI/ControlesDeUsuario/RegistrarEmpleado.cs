@@ -86,5 +86,10 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
         {
 
         }
+
+        private void cbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

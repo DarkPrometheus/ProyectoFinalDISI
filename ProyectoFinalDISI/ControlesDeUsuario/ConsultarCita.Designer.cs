@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbUsuario = new System.Windows.Forms.ComboBox();
@@ -37,9 +40,9 @@
             this.plTitle = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
-            this.GridCitas = new System.Windows.Forms.DataGridView();
             this.BtnConsultarID = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
+            this.GridCitas = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.plTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCitas)).BeginInit();
@@ -168,16 +171,6 @@
             this.btnConsultarUsuario.UseVisualStyleBackColor = false;
             this.btnConsultarUsuario.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // GridCitas
-            // 
-            this.GridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridCitas.Location = new System.Drawing.Point(93, 185);
-            this.GridCitas.Margin = new System.Windows.Forms.Padding(2);
-            this.GridCitas.Name = "GridCitas";
-            this.GridCitas.RowHeadersWidth = 51;
-            this.GridCitas.Size = new System.Drawing.Size(598, 263);
-            this.GridCitas.TabIndex = 30;
-            // 
             // BtnConsultarID
             // 
             this.BtnConsultarID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -198,7 +191,7 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnActualizar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(14, 150);
+            this.BtnActualizar.Location = new System.Drawing.Point(3, 123);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(90, 30);
             this.BtnActualizar.TabIndex = 32;
@@ -206,14 +199,55 @@
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
+            // GridCitas
+            // 
+            this.GridCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridCitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.GridCitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.GridCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridCitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.GridCitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.GridCitas.ColumnHeadersHeight = 30;
+            this.GridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.GridCitas.EnableHeadersVisualStyles = false;
+            this.GridCitas.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.GridCitas.Location = new System.Drawing.Point(3, 159);
+            this.GridCitas.Name = "GridCitas";
+            this.GridCitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.GridCitas.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.GridCitas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.GridCitas.Size = new System.Drawing.Size(749, 288);
+            this.GridCitas.TabIndex = 84;
+            // 
             // ConsultarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Controls.Add(this.GridCitas);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnConsultarID);
-            this.Controls.Add(this.GridCitas);
             this.Controls.Add(this.btnConsultarUsuario);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.plTitle);
@@ -242,8 +276,8 @@
         private System.Windows.Forms.TableLayoutPanel plTitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnConsultarUsuario;
-        private System.Windows.Forms.DataGridView GridCitas;
         private System.Windows.Forms.Button BtnConsultarID;
         private System.Windows.Forms.Button BtnActualizar;
+        private System.Windows.Forms.DataGridView GridCitas;
     }
 }
