@@ -14,9 +14,9 @@ namespace ProyectoFinalDISI
     internal class SQLCommands
     {
         // La base de datos ahora se llama "ProyectoFinal"
-        public const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
+        //public const string rutaBDD = @"C:\Users\Cristo\Documents\ProyectoFinalDISI\ProyectoFinal";
         //private const string rutaBDD = @"C:\Users\Briseño\Documents\ProyectoFinal";
-        ///private const string rutaBDD = @"C:\Users\Emmanuel\Desktop\Clases universidad\9no\Desarrollo e Implementación de Sistemas de Información\ProyectoFinalDISI\ProyectoFinal";
+        private const string rutaBDD = @"C:\Users\Emmanuel\Desktop\Clases universidad\9no\Desarrollo e Implementación de Sistemas de Información\ProyectoFinalDISI\ProyectoFinal";
         public static SQLiteConnection GetInstance()
         {
             // Devuelve una instancia de la base de datos
@@ -39,9 +39,6 @@ namespace ProyectoFinalDISI
         //    Lastname = reader["Lastname"].ToString(),
         //    Birthday = Convert.ToDateTime(reader["Birthday"]),
         //});
-
-   
-      
 
         public static string Login(string correo, string psd)
         {
@@ -265,22 +262,27 @@ namespace ProyectoFinalDISI
             }
         }
 
-        public static Queue GetEspecialidades()
+        public static Stack<string[]> GetEspecialidades()
         {
-            Queue Datos = new Queue();
+            Stack<string[]> datos = new Stack<string[]>();
             try
             {
                 using (var ctx = GetInstance())
                 {
                     using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                     {
-                        string query = "SELECT NombreEspecialidad FROM Especialidad";
+                        string query = "SELECT * FROM Especialidad";
                         using (var command = new SQLiteCommand(query, ctx))
                         {
                             using (var reader = command.ExecuteReader())
                             {
                                 while (reader.Read())
-                                    Datos.Enqueue(reader["NombreEspecialidad"].ToString());
+                                {
+                                    string[] temp = new string[2];
+                                    temp[0] = reader["idEspecialidad"].ToString();
+                                    temp[1] = reader["NombreEspecialidad"].ToString();
+                                    datos.Push(temp);
+                                }
                             }
                         }
                     }
@@ -292,9 +294,55 @@ namespace ProyectoFinalDISI
                 throw;
             }
 
-            return Datos;
+            return datos;
         }
-        
+
+        public static void DeleteEspecialidades(string id)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "Delete FROM Especialidad WHERE idEspecialidad='" + id + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+        }
+
+        public static void UpdateEspecialidades(string id, string nombre)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "Update Especialidad set NombreEspecialidad='" + nombre + "' WHERE idEspecialidad='" + id + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+        }
+
         public static Queue GetEspecialidadEmpleado(string medico)
         {
             Queue Datos = new Queue();
@@ -324,8 +372,8 @@ namespace ProyectoFinalDISI
 
             return Datos;
         }
+        #endregion
 
-       
         public static Queue GetIDUsuario()
         {
             Queue Datos = new Queue();
@@ -388,7 +436,6 @@ namespace ProyectoFinalDISI
 
         public static Queue GetNombreEmpleadoLogin(string correo)
         {
-           
             Queue Datos = new Queue();
             try
             {
@@ -419,9 +466,6 @@ namespace ProyectoFinalDISI
 
         public static void  GetTodasCitasAdmin(DataGridView grid)
         {
-
-
-           
             try
             {
  
@@ -441,16 +485,11 @@ namespace ProyectoFinalDISI
                 MessageBox.Show(e.Message, "Error al cargar ls citas");
                 throw;
             }
-
-
         }
 
 
         public static void GetUsuarioCitasAdmin(DataGridView grid,string Usuario)
         {
-
-
-
             try
             {
 
@@ -470,16 +509,11 @@ namespace ProyectoFinalDISI
                 MessageBox.Show(e.Message, "Error al cargar ls citas");
                 throw;
             }
-
-
         }
 
 
         public static void GetIDCitasAdmin(DataGridView grid, string id)
         {
-
-
-
             try
             {
 
@@ -499,9 +533,6 @@ namespace ProyectoFinalDISI
                 MessageBox.Show(e.Message, "Error al cargar ls citas");
                 throw;
             }
-
-
         }
-        #endregion
     }
 }

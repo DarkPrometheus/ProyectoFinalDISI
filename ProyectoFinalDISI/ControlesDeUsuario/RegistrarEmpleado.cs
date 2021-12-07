@@ -40,8 +40,8 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             txtPassword.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtPassword.LostFocus += new EventHandler(ClassPlaceholders.AddText);
 
-            foreach (var item in SQLCommands.GetEspecialidades())
-                cbEspecialidades.Items.Add(item);
+            foreach (string[] item in SQLCommands.GetEspecialidades())
+                cbEspecialidades.Items.Add(item[1]);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
