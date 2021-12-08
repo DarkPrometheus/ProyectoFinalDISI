@@ -52,8 +52,11 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
                 nombre = txtNombre.Text != "" && txtNombre.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[3],
                 genero = cbGenero.Text != "Seleciona un genero",
                 correo = txtCorreo.Text != "" && txtCorreo.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[4],
-                password = txtPassword.Text != "" && txtPassword.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[5];
-            if (especialidad && apellidoPaterno && apellidoMaterno && nombre && genero && correo && password)
+                password = txtPassword.Text != "" && txtPassword.Text != ClassPlaceholders.PlaceHoldersRegistroUsuarios[5],
+                entrada = cbHoraEntrada.Text != "Selecciona una hora de entrada",
+                salida = cbHoraSalida.Text != "Selecciona una hora de salida";
+
+            if (especialidad && apellidoPaterno && apellidoMaterno && nombre && genero && correo && password && entrada && salida)
             {
                 string isAdmin = (checkBox1.Checked == true) ? "Admin" : "Empleado";
                 SQLCommands.InsertarEmpleado(
@@ -68,6 +71,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
                         txtPassword.Text,
                         isAdmin
                         });
+                SQLCommands.InsertarHorario(txtNombre.Text, cbHoraEntrada.Text, cbHoraSalida.Text);
 
                 cbEspecialidades.SelectedItem = cbEspecialidades.Items[0];
                 txtApellidoPaterno.Text = ClassPlaceholders.PlaceHoldersRegistroUsuarios[1];
@@ -80,11 +84,6 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             }
             else
                 MessageBox.Show("Fantan datos por ingresar", "Falta datos");
-        }
-
-        private void RegistrarEmpleado_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void cbGenero_SelectedIndexChanged(object sender, EventArgs e)

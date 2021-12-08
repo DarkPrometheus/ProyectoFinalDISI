@@ -20,32 +20,26 @@ namespace ProyectoFinalDISI
             instance = this;
         }
 
-
-   
-
-
-
         public void btnLogIn_Click(object sender, EventArgs e)
         {
             // Dependiento de que tipo de usuario se redirecciona al correspondiente
-            string usuario = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
-            if (usuario != "Error")
+            string[] datos = SQLCommands.Login(txtEmail.Text, txtPassword.Text);
+            if (datos[0] != "Error")
             {
                 Hide();
-                if (usuario == "Admin")
+                if (datos[0] == "Admin")
                 {
-                    Pantallas_principales.Dashboard dashboardAdmin = new Pantallas_principales.Dashboard();
+                    Pantallas_principales.Dashboard dashboardAdmin = new Pantallas_principales.Dashboard(datos[1]);
                     dashboardAdmin.Show();
                 }
-                else if (usuario == "Empleado")
+                else if (datos[0] == "Empleado")
                 {
-                    PantallasPrincipales.DashboardEmpleados dashboardEmpleados = new PantallasPrincipales.DashboardEmpleados();
+                    PantallasPrincipales.DashboardEmpleados dashboardEmpleados = new PantallasPrincipales.DashboardEmpleados(datos[1], datos[2]);
                     dashboardEmpleados.Show();
-
                 }
-                else if (usuario == "Cliente")
+                else if (datos[0] == "Cliente")
                 {
-                    PantallasPrincipales.DashboardCliente dashboardCliente = new PantallasPrincipales.DashboardCliente();
+                    PantallasPrincipales.DashboardCliente dashboardCliente = new PantallasPrincipales.DashboardCliente(datos[1], datos[2]);
                     dashboardCliente.Show();
                 }
                 txtEmail.Clear();

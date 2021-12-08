@@ -64,12 +64,6 @@
     <Compile Include="ControlesDeUsuario\ActualizarCita.Designer.cs">
       <DependentUpon>ActualizarCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlesDeUsuario\ConsultarCitaCliente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlesDeUsuario\ConsultarCitaCliente.Designer.cs">
-      <DependentUpon>ConsultarCitaCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlesDeUsuario\CrearCitaCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\ActualizarCita.resx">
       <DependentUpon>ActualizarCita.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlesDeUsuario\ConsultarCitaCliente.resx">
-      <DependentUpon>ConsultarCitaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CrearCitaCliente.resx">
       <DependentUpon>CrearCitaCliente.cs</DependentUpon>

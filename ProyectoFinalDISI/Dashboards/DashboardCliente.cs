@@ -12,14 +12,15 @@ namespace ProyectoFinalDISI.PantallasPrincipales
 {
     public partial class DashboardCliente : Form
     {
-        public DashboardCliente()
+        string gIdUsuario, gCorreo;
+        public DashboardCliente(string idUsuario, string correo)
         {
             InitializeComponent();
+
+            gIdUsuario = idUsuario;
+            gCorreo = correo;
         }
 
-
-        
-        
         private void btnCrearCitas_Click(object sender, EventArgs e)
         {
             DesplegarPantalla("CrearCitas");
@@ -40,16 +41,15 @@ namespace ProyectoFinalDISI.PantallasPrincipales
             int widthBoton = 195;
             switch (pantalla)
             {
-               
                 case "CrearCitas":
                     btnCrearCitas.Width = widthBoton;
-                    ControlesDeUsuario.CrearCitaCliente crearCita = new ControlesDeUsuario.CrearCitaCliente();
+                    ControlesDeUsuario.CrearCitaCliente crearCita = new ControlesDeUsuario.CrearCitaCliente(gIdUsuario, gCorreo);
                     crearCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(crearCita);
                     break;
                 case "ConsultarCita":
                     btnConsultarCitas.Width = widthBoton;
-                    ControlesDeUsuario.ConsultarCita__Clientes consultarCita = new ControlesDeUsuario.ConsultarCita__Clientes();
+                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita("Cliente", gIdUsuario);
                     consultarCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(consultarCita);
                     break;

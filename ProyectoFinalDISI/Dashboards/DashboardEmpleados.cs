@@ -12,9 +12,13 @@ namespace ProyectoFinalDISI.PantallasPrincipales
 {
     public partial class DashboardEmpleados : Form
     {
-        public DashboardEmpleados()
+        string gIdUsuario, gCorreo;
+        public DashboardEmpleados(string idUsuario, string correo)
         {
             InitializeComponent();
+
+            gIdUsuario = idUsuario;
+            gCorreo = correo;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -54,13 +58,13 @@ namespace ProyectoFinalDISI.PantallasPrincipales
                     break;
                 case "CrearCita":
                     btnCrearCitas.Width = widthBoton;
-                    ControlesDeUsuario.CrearCitaEmpleado cita = new ControlesDeUsuario.CrearCitaEmpleado();
+                    ControlesDeUsuario.CrearCitaEmpleado cita = new ControlesDeUsuario.CrearCitaEmpleado(gCorreo, gIdUsuario);
                     cita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(cita);
                     break;
                 case "ConsultarCita":
                     btnConsultarCitas.Width = widthBoton;
-                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita();
+                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita("Empleado", gIdUsuario);
                     consultarCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(consultarCita);
                     break;

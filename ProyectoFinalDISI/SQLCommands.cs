@@ -40,9 +40,9 @@ namespace ProyectoFinalDISI
         //    Birthday = Convert.ToDateTime(reader["Birthday"]),
         //});
 
-        public static string Login(string correo, string psd)
+        public static string[] Login(string correo, string psd)
         {
-            Queue<String> queueCorreos = new Queue<String>(), queuePsds = new Queue<String>(), queueTipoUsuario = new Queue<String>();
+            Queue<String> queueCorreos = new Queue<String>(), queuePsds = new Queue<String>(), queueTipoUsuario = new Queue<String>(), queueIdUsuario = new Queue<string>();
             try
             {
                 using (var ctx = GetInstance())
@@ -59,26 +59,35 @@ namespace ProyectoFinalDISI
                                     queueCorreos.Enqueue(reader["Correo"].ToString());
                                     queuePsds.Enqueue(reader["Psd"].ToString());
                                     queueTipoUsuario.Enqueue(reader["TipoUsuario"].ToString());
+                                    queueIdUsuario.Enqueue(reader["idCuenta"].ToString());
                                 }
                             }
                         }
                     }
                 }
-                String[] arrCorreos = queueCorreos.ToArray(), arrPsds = queuePsds.ToArray(), arrTipoUsuario = queueTipoUsuario.ToArray();
+                String[] arrCorreos = queueCorreos.ToArray(), arrPsds = queuePsds.ToArray(), arrTipoUsuario = queueTipoUsuario.ToArray(), arrIdUsuario = queueIdUsuario.ToArray();
 
-                string tempCorreo, tempPsd, tipoUsuario = "Error";
+                string tempCorreo, tempPsd;
+                string[] datos = new string[3]
+                {
+                    "Error",
+                    "",
+                    ""
+                };
                 for (int i = 0; i < arrCorreos.Length; i++)
                 {
                     tempCorreo = arrCorreos[i].ToString();
                     tempPsd = arrPsds[i].ToString();
                     if (tempCorreo == correo && tempPsd == psd)
                     {
-                        tipoUsuario = arrTipoUsuario[i];
+                        datos[0] = arrTipoUsuario[i];
+                        datos[1] = arrIdUsuario[i];
+                        datos[2] = arrCorreos[i];
                         i = arrCorreos.Length;
                     }
                 }
 
-                return tipoUsuario;
+                return datos;
             }
             catch (Exception e)
             {
@@ -174,6 +183,19 @@ namespace ProyectoFinalDISI
 
                         cmd.Dispose();
                     }
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
+
+                        cmd.CommandText = "INSERT INTO Cuentas (" +
+                            "Correo, " +
+                            "TipoUsuario, " +
+                            "Psd) VALUES('" + datos[5] + "', 'Cliente', '" + datos[6] + "');";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
                 }
                 MessageBox.Show("Se ha creado la cuenta del cliente " + datos[0] + " correctamente", "Sin errores");
             }
@@ -183,53 +205,6 @@ namespace ProyectoFinalDISI
                 MessageBox.Show(e.Message, "Error");
                 throw;
             }
-        }
-
-        public static void InsertarCita(string[] datos)
-        {
-            try
-            {
-                using (var ctx = GetInstance())
-                {
-                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
-                    {
-                        Conexion.Open();
-                        SQLiteCommand cmd = Conexion.CreateCommand();
-
-                        cmd.CommandText = "INSERT INTO Cita (" +
-                            "Especialiadad, " +
-                            "Usuario, " +
-                            "Medico, " +
-                            "Fecha, " +
-                            "Hora) VALUES(" +
-                            "'" + datos[0] + "', " +
-                            "'" + datos[1] + "', " +
-                            "'" + datos[2] + "', " +
-                            "'" + datos[3] + "', " +
-                            "'" + datos[4] + "');";
-                        cmd.ExecuteNonQuery();
-
-                        cmd.Dispose();
-                    }
-                }
-                MessageBox.Show("Se ha ingresado la cita " + datos[0] + " correctamente", "Sin errores");
-            }
-
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error");
-                throw;
-            }
-        }
-
-        public static void InsertarHorario()
-        {
-            // TODO
-        }
-
-        public static void InsertarEspecialidad()
-        {
-            // TODO
         }
         #endregion
 
@@ -341,9 +316,9 @@ namespace ProyectoFinalDISI
             }
         }
 
-        public static Queue GetEspecialidadEmpleado(string medico)
+        public static string GetEspecialidadEmpleado(string medico)
         {
-            Queue Datos = new Queue();
+            string especialidad = "";
             try
             {
                 using (var ctx = GetInstance())
@@ -356,7 +331,7 @@ namespace ProyectoFinalDISI
                             using (var reader = command.ExecuteReader())
                             {
                                 while (reader.Read())
-                                    Datos.Enqueue(reader["Especialidad"].ToString());
+                                    especialidad = reader["Especialidad"].ToString();
                             }
                         }
                     }
@@ -368,11 +343,48 @@ namespace ProyectoFinalDISI
                 throw;
             }
 
-            return Datos;
+            return especialidad;
         }
         #endregion
 
         #region Citas
+        public static void InsertarCita(string[] datos)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
+
+                        cmd.CommandText = "INSERT INTO Cita (" +
+                            "Especialidad, " +
+                            "Usuario, " +
+                            "Medico, " +
+                            "Fecha, " +
+                            "Hora) VALUES(" +
+                            "'" + datos[0] + "', " +
+                            "'" + datos[1] + "', " +
+                            "'" + datos[2] + "', " +
+                            "'" + datos[3] + "', " +
+                            "'" + datos[4] + "');";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
+                }
+                MessageBox.Show("Se ha ingresado la cita correctamente", "Sin errores");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
+            }
+        }
+
         public static Stack<string[]> GetCitas()
         {
             Stack<string[]> datos = new Stack<string[]>();
@@ -391,7 +403,76 @@ namespace ProyectoFinalDISI
                                 {
                                     string[] temp = new string[6];
                                     temp[0] = reader["id_cita"].ToString();
-                                    temp[1] = reader["Especialiadad"].ToString();
+                                    temp[1] = reader["Especialidad"].ToString();
+                                    temp[2] = reader["Usuario"].ToString();
+                                    temp[3] = reader["Medico"].ToString();
+                                    temp[4] = reader["Fecha"].ToString();
+                                    temp[5] = reader["Hora"].ToString();
+                                    datos.Push(temp);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+
+            return datos;
+        }
+
+        public static int GetHoraCitaMedico(string medico, string hora, string fecha)
+        {
+            int horario = 0;
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT id_cita FROM Cita where Medico='" + medico + "' and Hora='" + hora + "' and Fecha='" + fecha + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                    horario = 1;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+
+            return horario;
+        }
+
+        public static Stack<string[]> GetCitasUsuario(string usuario)
+        {
+            Stack<string[]> datos = new Stack<string[]>();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT * FROM Cita where Usuario='" + usuario + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    string[] temp = new string[6];
+                                    temp[0] = reader["id_cita"].ToString();
+                                    temp[1] = reader["Especialidad"].ToString();
                                     temp[2] = reader["Usuario"].ToString();
                                     temp[3] = reader["Medico"].ToString();
                                     temp[4] = reader["Fecha"].ToString();
@@ -444,6 +525,134 @@ namespace ProyectoFinalDISI
                     using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                     {
                         string query = "Update Cita SET Especialiadad='" + especialidad + "', Usuario='" + usuario + "', Medico='" + medico + "', Fecha='" + date + "', Hora='" + hora + "'  WHERE id_cita='" + id + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+        }
+        #endregion
+
+        #region Horarios
+        public static void InsertarHorario(string medico, string horaEntrada, string horaSalida)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        Conexion.Open();
+                        SQLiteCommand cmd = Conexion.CreateCommand();
+
+                        cmd.CommandText = "INSERT INTO Horarios (" +
+                            "Medico, " +
+                            "HoraEntrada, " +
+                            "HoraSalida) VALUES(" +
+                            "'" + medico + "', " +
+                            "'" + horaEntrada + "', " +
+                            "'" + horaSalida + "');";
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Dispose();
+                    }
+                }
+                MessageBox.Show("Se ha ingresado el nuevo horario correctamente", "Sin errores");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+                throw;
+            }
+        }
+
+        public static Stack<string[]> GetHorarios()
+        {
+            Stack<string[]> datos = new Stack<string[]>();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT * FROM Horarios";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    string[] temp = new string[6];
+                                    temp[0] = reader["idHorario"].ToString();
+                                    temp[1] = reader["Medico"].ToString();
+                                    temp[2] = reader["HoraEntrada"].ToString();
+                                    temp[3] = reader["HoraSalida"].ToString();
+                                    datos.Push(temp);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+
+            return datos;
+        }
+
+        public static string[] GetHorariosMedicos(string medico)
+        {
+            string[] datos = new string[2];
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT * FROM Horarios WHERE Medico='" + medico + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    datos[0] = reader["HoraEntrada"].ToString();
+                                    datos[1] = reader["HoraSalida"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+
+            return datos;
+        }
+
+        public static void DeleteHorario(string id)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "Delete FROM Horarios WHERE idHorario='" + id + "'";
                         using (var command = new SQLiteCommand(query, ctx))
                         {
                             command.ExecuteNonQuery();
@@ -517,106 +726,6 @@ namespace ProyectoFinalDISI
             }
 
             return Datos;
-        }
-
-        public static Queue GetNombreEmpleadoLogin(string correo)
-        {
-            Queue Datos = new Queue();
-            try
-            {
-                using (var ctx = GetInstance())
-                {
-                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
-                    {
-                        string query = "SELECT Correo FROM Empleado";
-                        using (var command = new SQLiteCommand(query, ctx))
-                        {
-                            using (var reader = command.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                    Datos.Enqueue(reader["NombreEmpleado"].ToString());
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "No se encontro el medico");
-                throw;
-            }
-
-            return Datos;
-        }
-
-        public static void  GetTodasCitasAdmin(DataGridView grid)
-        {
-            try
-            {
- 
-                  using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD)) 
-                    { 
-                Conexion.Open(); 
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From Cita",Conexion);  
-                DataSet dset = new DataSet();
-                adapter.Fill(dset, "info");
-                grid.DataSource = dset.Tables[0];
-                Conexion.Close();
-                    }
-             
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error al cargar ls citas");
-                throw;
-            }
-        }
-
-
-        public static void GetUsuarioCitasAdmin(DataGridView grid,string Usuario)
-        {
-            try
-            {
-                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
-                {
-                    Conexion.Open();
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From Cita Where Usuario='" + Usuario + "'", Conexion);
-                    DataSet dset = new DataSet();
-                    adapter.Fill(dset, "info");
-                    grid.DataSource = dset.Tables[0];
-                    Conexion.Close();
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error al cargar ls citas");
-                throw;
-            }
-        }
-
-
-        public static void GetIDCitasAdmin(DataGridView grid, string id)
-        {
-            try
-            {
-
-                using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
-                {
-                    Conexion.Open();
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From Cita Where id_cita='" + id + "'", Conexion);
-                    DataSet dset = new DataSet();
-                    adapter.Fill(dset, "info");
-                    grid.DataSource = dset.Tables[0];
-                    Conexion.Close();
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error al cargar ls citas");
-                throw;
-            }
         }
     }
 }

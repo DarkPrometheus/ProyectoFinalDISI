@@ -28,6 +28,9 @@ namespace ProyectoFinalDISI.Confirmacion
                 case "Cita":
                     label4.Text = "¿Deseas eliminar la cita del usuario " + nombre + "?";
                     break;
+                case "Horario":
+                    label4.Text = "¿Deseas eliminar el horario del medico " + nombre + "?";
+                    break;
                 default:
                     break;
             }
@@ -44,6 +47,10 @@ namespace ProyectoFinalDISI.Confirmacion
                 case "Cita":
                     SQLCommands.DeleteCita(gId);
                     MessageBox.Show("Se ha eliminado la cita del usuario " + gNombre + " correctamente", "Eliminacion completa");
+                    break;
+                case "Horario":
+                    SQLCommands.DeleteHorario(gId);
+                    MessageBox.Show("Se ha eliminado el horario del medico " + gNombre + " correctamente", "Eliminacion completa");
                     break;
                 default:
                     break;

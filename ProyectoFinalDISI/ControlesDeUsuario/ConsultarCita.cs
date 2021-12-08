@@ -12,15 +12,26 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
 {
     public partial class ConsultarCita : UserControl
     {
-        public ConsultarCita()
+        public ConsultarCita(string tipoUsuario, string idUsuraio)
         {
             // TODO: Colocar placesholders
             InitializeComponent();
             foreach (var item in SQLCommands.GetIDUsuario())
                 cbUsuario.Items.Add(item);
 
-            foreach (var item in SQLCommands.GetCitas())
-                CrearFilaCita(item);
+            switch (tipoUsuario)
+            {
+                case "Empleado":
+                    foreach (var item in SQLCommands.GetCitas())
+                        CrearFilaCita(item);
+                    break;
+                case "Cliente":
+                    foreach (var item in SQLCommands.GetCitasUsuario(idUsuraio))
+                        CrearFilaCita(item);
+                    break;
+                default:
+                    break;
+            }
         }
 
         Dictionary<string, string[]> dictionaryNombresCita = new Dictionary<string, string[]>();

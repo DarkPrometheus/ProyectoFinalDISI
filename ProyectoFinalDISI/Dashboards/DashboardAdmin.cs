@@ -12,9 +12,11 @@ namespace ProyectoFinalDISI.Pantallas_principales
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        string gIdUsuario;
+        public Dashboard(string idUsuario)
         {
             InitializeComponent();
+            gIdUsuario = idUsuario;
         }
 
         #region Botones
@@ -88,7 +90,7 @@ namespace ProyectoFinalDISI.Pantallas_principales
                     break;
                 case "ConsultarCita":
                     btnConsultarCitas.Width = widthBoton;
-                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita();
+                    ControlesDeUsuario.ConsultarCita consultarCita = new ControlesDeUsuario.ConsultarCita("Empleado", gIdUsuario);
                     consultarCita.Dock = DockStyle.Fill;
                     AddControlToMainPanel(consultarCita);
                     break;

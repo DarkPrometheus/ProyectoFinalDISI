@@ -12,50 +12,101 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
 {
     public partial class CrearCita : UserControl
     {
+        string gEspecialidad = "";
+        int creado = 0;
         public CrearCita()
         {
             InitializeComponent();
             cbMedico.SelectedItem = cbMedico.Items[0];
             cbUsuario.SelectedItem = cbUsuario.Items[0];
 
-            txtHoraCrearCita.Text = ClassPlaceholders.PlaceHoldersCrearCita[1];
-            txtHoraCrearCita.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
-            txtHoraCrearCita.LostFocus += new EventHandler(ClassPlaceholders.AddText);
-
             foreach (var item in SQLCommands.GetIDUsuario())
                 cbUsuario.Items.Add(item);
 
             foreach (var item in SQLCommands.GetNombreEmpleado())
                 cbMedico.Items.Add(item);
+            creado = 1;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            bool medico = (cbMedico.Text != "Selecciona un medico"), usuario = (cbUsuario.Text != "Selecciona un usuario"), hora = (txtHoraCrearCita.Text != ""), especialidad = (cbEspecialidad.Text != "Selecciona una especialidad");
-            if (medico && usuario && hora && especialidad)
-                SQLCommands.InsertarCita(new string[] { cbEspecialidad.Text, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, txtHoraCrearCita.Text });
-        }
-
-        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CrearCita_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            
+            bool medico = (cbMedico.Text != "Selecciona un medico"), usuario = (cbUsuario.Text != "Selecciona un usuario"), hora = (cbHorarios.Text != "");
+            if (medico && usuario && hora)
+            {
+                SQLCommands.InsertarCita(new string[] { gEspecialidad, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, cbHorarios.Text });
+                cbMedico.SelectedIndex = 0;
+                cbUsuario.SelectedIndex = 0;
+                cbHorarios.Items.Clear();
+                cbHorarios.Items.Add("Selecciona un medico para ver horarios");
+            }
         }
 
         private void cbMedico_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in SQLCommands.GetEspecialidadEmpleado(cbMedico.Text))
-                cbEspecialidad.Items.Add(item);
+            if (creado == 1 && cbMedico.Text != "Selecciona un medico")
+            {
+                cbHorarios.Items.Clear();
+
+                string[] horas = SQLCommands.GetHorariosMedicos(cbMedico.Text);
+
+                string entrada = horas[0][0].ToString() + horas[0][1].ToString();
+                string salida = horas[1][0].ToString() + horas[1][1].ToString();
+
+                for (int i = int.Parse(entrada); i <= int.Parse(salida); i++)
+                {
+                    if (i <= 9)
+                    {
+                        if (SQLCommands.GetHoraCitaMedico(cbMedico.Text, "0" + i + ":00", dateTimePicker.Text) != 1)
+                            cbHorarios.Items.Add("0" + i + ":00");
+                    }
+                    else
+                    {
+                        if (SQLCommands.GetHoraCitaMedico(cbMedico.Text, "0" + i + ":00", dateTimePicker.Text) != 1)
+                            cbHorarios.Items.Add(i + ":00");
+                    }
+                }
+
+                gEspecialidad = SQLCommands.GetEspecialidadEmpleado(cbMedico.Text);
+            }
+            if (cbMedico.Text == "Selecciona un medico")
+            {
+                cbHorarios.Items.Clear();
+                cbHorarios.Items.Add("Selecciona un medico para ver horarios");
+            }
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (creado == 1 && cbMedico.Text != "Selecciona un medico")
+            {
+                cbHorarios.Items.Clear();
+
+                string[] horas = SQLCommands.GetHorariosMedicos(cbMedico.Text);
+
+                string entrada = horas[0][0].ToString() + horas[0][1].ToString();
+                string salida = horas[1][0].ToString() + horas[1][1].ToString();
+
+                for (int i = int.Parse(entrada); i <= int.Parse(salida); i++)
+                {
+                    if (i <= 9)
+                    {
+                        if (SQLCommands.GetHoraCitaMedico(cbMedico.Text, "0" + i + ":00", dateTimePicker.Text) != 1)
+                            cbHorarios.Items.Add("0" + i + ":00");
+                    }
+                    else
+                    {
+                        if (SQLCommands.GetHoraCitaMedico(cbMedico.Text, "0" + i + ":00", dateTimePicker.Text) != 1)
+                            cbHorarios.Items.Add(i + ":00");
+                    }
+                }
+
+                gEspecialidad = SQLCommands.GetEspecialidadEmpleado(cbMedico.Text);
+            }
+            if (cbMedico.Text == "Selecciona un medico")
+            {
+                cbHorarios.Items.Clear();
+                cbHorarios.Items.Add("Selecciona un medico para ver horarios");
+            }
         }
 
         // TODO: Registrar en la base de datos la cita nueva
