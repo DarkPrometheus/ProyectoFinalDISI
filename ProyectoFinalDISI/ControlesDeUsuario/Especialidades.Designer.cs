@@ -176,7 +176,7 @@
             this.plContenedor.AutoScroll = true;
             this.plContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.plContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.plContenedor.Location = new System.Drawing.Point(3, 295);
+            this.plContenedor.Location = new System.Drawing.Point(2, 293);
             this.plContenedor.Name = "plContenedor";
             this.plContenedor.Size = new System.Drawing.Size(750, 152);
             this.plContenedor.TabIndex = 30;
@@ -189,7 +189,7 @@
             this.plHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.plHeader.Controls.Add(this.label17, 1, 0);
             this.plHeader.Controls.Add(this.label2, 0, 0);
-            this.plHeader.Location = new System.Drawing.Point(4, 265);
+            this.plHeader.Location = new System.Drawing.Point(3, 263);
             this.plHeader.Name = "plHeader";
             this.plHeader.RowCount = 1;
             this.plHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));

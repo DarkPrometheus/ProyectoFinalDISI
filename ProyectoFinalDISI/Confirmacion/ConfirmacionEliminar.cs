@@ -25,6 +25,9 @@ namespace ProyectoFinalDISI.Confirmacion
                 case "Especialidad":
                     label4.Text = "¿Deseas eliminar la especialidad " + nombre + "?";
                     break;
+                case "Cita":
+                    label4.Text = "¿Deseas eliminar la cita del usuario " + nombre + "?";
+                    break;
                 default:
                     break;
             }
@@ -37,6 +40,10 @@ namespace ProyectoFinalDISI.Confirmacion
                 case "Especialidad":
                     SQLCommands.DeleteEspecialidades(gId);
                     MessageBox.Show("Se ha eliminado " + gNombre + " correctamente", "Eliminacion completa");
+                    break;
+                case "Cita":
+                    SQLCommands.DeleteCita(gId);
+                    MessageBox.Show("Se ha eliminado la cita del usuario " + gNombre + " correctamente", "Eliminacion completa");
                     break;
                 default:
                     break;

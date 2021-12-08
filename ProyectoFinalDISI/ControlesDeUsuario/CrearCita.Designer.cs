@@ -34,8 +34,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIdCitas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbMedico = new System.Windows.Forms.ComboBox();
             this.txtHoraCrearCita = new System.Windows.Forms.TextBox();
@@ -95,8 +93,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbEspecialidad, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtIdCitas, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbMedico, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtHoraCrearCita, 1, 4);
@@ -128,7 +124,7 @@
             this.label4.Size = new System.Drawing.Size(244, 35);
             this.label4.TabIndex = 30;
             this.label4.Text = "Especialidad:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbEspecialidad
             // 
@@ -136,35 +132,12 @@
             this.cbEspecialidad.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Items.AddRange(new object[] {
-            "Selecciona una Especialidad"});
+            "Selecciona una especialidad"});
             this.cbEspecialidad.Location = new System.Drawing.Point(253, 148);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(244, 28);
             this.cbEspecialidad.TabIndex = 29;
             this.cbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbEspecialidad_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "ID Cita:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtIdCitas
-            // 
-            this.txtIdCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdCitas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtIdCitas.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCitas.Location = new System.Drawing.Point(253, 3);
-            this.txtIdCitas.Name = "txtIdCitas";
-            this.txtIdCitas.Size = new System.Drawing.Size(244, 26);
-            this.txtIdCitas.TabIndex = 7;
             // 
             // label3
             // 
@@ -177,7 +150,7 @@
             this.label3.Size = new System.Drawing.Size(244, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Medico:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbMedico
             // 
@@ -221,7 +194,7 @@
             this.label7.Size = new System.Drawing.Size(244, 29);
             this.label7.TabIndex = 5;
             this.label7.Text = "Hora:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -234,7 +207,7 @@
             this.label5.Size = new System.Drawing.Size(244, 29);
             this.label5.TabIndex = 5;
             this.label5.Text = "Fecha:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -247,7 +220,7 @@
             this.label1.Size = new System.Drawing.Size(244, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Usuario:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbUsuario
             // 
@@ -255,7 +228,7 @@
             this.cbUsuario.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUsuario.FormattingEnabled = true;
             this.cbUsuario.Items.AddRange(new object[] {
-            "Selecciona un medico"});
+            "Selecciona un usuario"});
             this.cbUsuario.Location = new System.Drawing.Point(253, 61);
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Size = new System.Drawing.Size(244, 28);
@@ -287,8 +260,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdCitas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbMedico;
         private System.Windows.Forms.Label label5;

@@ -197,7 +197,6 @@ namespace ProyectoFinalDISI
                         SQLiteCommand cmd = Conexion.CreateCommand();
 
                         cmd.CommandText = "INSERT INTO Cita (" +
-                            "id_cita, " +
                             "Especialiadad, " +
                             "Usuario, " +
                             "Medico, " +
@@ -207,8 +206,7 @@ namespace ProyectoFinalDISI
                             "'" + datos[1] + "', " +
                             "'" + datos[2] + "', " +
                             "'" + datos[3] + "', " +
-                            "'" + datos[4] + "', " +
-                            "'" + datos[5] + "');";
+                            "'" + datos[4] + "');";
                         cmd.ExecuteNonQuery();
 
                         cmd.Dispose();
@@ -374,6 +372,93 @@ namespace ProyectoFinalDISI
         }
         #endregion
 
+        #region Citas
+        public static Stack<string[]> GetCitas()
+        {
+            Stack<string[]> datos = new Stack<string[]>();
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "SELECT * FROM Cita";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    string[] temp = new string[6];
+                                    temp[0] = reader["id_cita"].ToString();
+                                    temp[1] = reader["Especialiadad"].ToString();
+                                    temp[2] = reader["Usuario"].ToString();
+                                    temp[3] = reader["Medico"].ToString();
+                                    temp[4] = reader["Fecha"].ToString();
+                                    temp[5] = reader["Hora"].ToString();
+                                    datos.Push(temp);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+
+            return datos;
+        }
+
+        public static void DeleteCita(string id)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "Delete FROM Cita WHERE id_cita='" + id + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+        }
+
+        public static void UpdateCitas(string id, string medico, string usuario, string date, string hora, string especialidad)
+        {
+            try
+            {
+                using (var ctx = GetInstance())
+                {
+                    using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
+                    {
+                        string query = "Update Cita SET Especialiadad='" + especialidad + "', Usuario='" + usuario + "', Medico='" + medico + "', Fecha='" + date + "', Hora='" + hora + "'  WHERE id_cita='" + id + "'";
+                        using (var command = new SQLiteCommand(query, ctx))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al cargar la especialidad");
+                throw;
+            }
+        }
+        #endregion
+
         public static Queue GetIDUsuario()
         {
             Queue Datos = new Queue();
@@ -492,7 +577,6 @@ namespace ProyectoFinalDISI
         {
             try
             {
-
                 using (SQLiteConnection Conexion = new SQLiteConnection("Data source = " + rutaBDD))
                 {
                     Conexion.Open();

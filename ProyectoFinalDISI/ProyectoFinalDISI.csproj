@@ -58,6 +58,12 @@
     <Compile Include="Confirmacion\ConfirmacionEliminar.Designer.cs">
       <DependentUpon>ConfirmacionEliminar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesDeUsuario\ActualizarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\ActualizarCita.Designer.cs">
+      <DependentUpon>ActualizarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesDeUsuario\ConsultarCitaCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <Compile Include="SQLCommands.cs" />
     <EmbeddedResource Include="Confirmacion\ConfirmacionEliminar.resx">
       <DependentUpon>ConfirmacionEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\ActualizarCita.resx">
+      <DependentUpon>ActualizarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\ConsultarCitaCliente.resx">
       <DependentUpon>ConsultarCitaCliente.cs</DependentUpon>

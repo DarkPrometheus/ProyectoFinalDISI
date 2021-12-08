@@ -18,27 +18,22 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             cbMedico.SelectedItem = cbMedico.Items[0];
             cbUsuario.SelectedItem = cbUsuario.Items[0];
 
-            txtIdCitas.Text = ClassPlaceholders.PlaceHoldersCrearCita[0];
-            txtIdCitas.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
-            txtIdCitas.LostFocus += new EventHandler(ClassPlaceholders.AddText);
-
             txtHoraCrearCita.Text = ClassPlaceholders.PlaceHoldersCrearCita[1];
             txtHoraCrearCita.GotFocus += new EventHandler(ClassPlaceholders.RemoveText);
             txtHoraCrearCita.LostFocus += new EventHandler(ClassPlaceholders.AddText);
 
-
             foreach (var item in SQLCommands.GetIDUsuario())
                 cbUsuario.Items.Add(item);
 
-
             foreach (var item in SQLCommands.GetNombreEmpleado())
                 cbMedico.Items.Add(item);
-
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            SQLCommands.InsertarCita(new string[] { txtIdCitas.Text,cbEspecialidad.Text, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, txtHoraCrearCita.Text });
+            bool medico = (cbMedico.Text != "Selecciona un medico"), usuario = (cbUsuario.Text != "Selecciona un usuario"), hora = (txtHoraCrearCita.Text != ""), especialidad = (cbEspecialidad.Text != "Selecciona una especialidad");
+            if (medico && usuario && hora && especialidad)
+                SQLCommands.InsertarCita(new string[] { cbEspecialidad.Text, cbUsuario.Text, cbMedico.Text, dateTimePicker.Text, txtHoraCrearCita.Text });
         }
 
         private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)

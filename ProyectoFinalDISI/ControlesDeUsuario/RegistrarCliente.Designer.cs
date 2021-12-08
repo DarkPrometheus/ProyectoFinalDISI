@@ -57,7 +57,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(324, 64);
+            this.label6.Size = new System.Drawing.Size(323, 64);
             this.label6.TabIndex = 2;
             this.label6.Text = "Cliente nuevo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,7 +124,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label4.Size = new System.Drawing.Size(217, 30);
             this.label4.TabIndex = 5;
             this.label4.Text = "Apellido paterno:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtApellidoPaterno
             // 
@@ -147,7 +147,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label3.Size = new System.Drawing.Size(217, 30);
             this.label3.TabIndex = 5;
             this.label3.Text = "Apellido materno:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtApellidoMaterno
             // 
@@ -170,7 +170,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label7.Size = new System.Drawing.Size(217, 30);
             this.label7.TabIndex = 5;
             this.label7.Text = "Nombre:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtNombre
             // 
@@ -194,7 +194,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label5.Size = new System.Drawing.Size(217, 30);
             this.label5.TabIndex = 5;
             this.label5.Text = "Genero:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbGenero
             // 
@@ -221,7 +221,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label8.Size = new System.Drawing.Size(217, 30);
             this.label8.TabIndex = 5;
             this.label8.Text = "Fecha de nacimiento:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePicker
             // 
@@ -244,7 +244,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label9.Size = new System.Drawing.Size(217, 30);
             this.label9.TabIndex = 5;
             this.label9.Text = "Correo electronico:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtCorreo
             // 
@@ -277,7 +277,7 @@ namespace ProyectoFinalDISI.ControlesDeUsuario
             this.label10.Size = new System.Drawing.Size(217, 30);
             this.label10.TabIndex = 5;
             this.label10.Text = "Contraseña:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RegistrarCliente
             // 

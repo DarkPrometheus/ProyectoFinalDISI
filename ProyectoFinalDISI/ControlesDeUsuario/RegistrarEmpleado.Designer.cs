@@ -141,7 +141,7 @@
             this.label3.Size = new System.Drawing.Size(217, 30);
             this.label3.TabIndex = 5;
             this.label3.Text = "Apellido materno:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -154,7 +154,7 @@
             this.label4.Size = new System.Drawing.Size(217, 30);
             this.label4.TabIndex = 5;
             this.label4.Text = "Apellido paterno:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -167,7 +167,7 @@
             this.label5.Size = new System.Drawing.Size(217, 30);
             this.label5.TabIndex = 5;
             this.label5.Text = "Genero:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -180,7 +180,7 @@
             this.label7.Size = new System.Drawing.Size(217, 30);
             this.label7.TabIndex = 5;
             this.label7.Text = "Nombre:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
@@ -193,7 +193,7 @@
             this.label8.Size = new System.Drawing.Size(217, 30);
             this.label8.TabIndex = 5;
             this.label8.Text = "Fecha de nacimiento:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
@@ -206,7 +206,7 @@
             this.label9.Size = new System.Drawing.Size(217, 30);
             this.label9.TabIndex = 5;
             this.label9.Text = "Correo electronico:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -219,7 +219,7 @@
             this.label10.Size = new System.Drawing.Size(217, 30);
             this.label10.TabIndex = 5;
             this.label10.Text = "Contraseña:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtApellidoPaterno
             // 
@@ -298,7 +298,7 @@
             this.label12.Size = new System.Drawing.Size(217, 30);
             this.label12.TabIndex = 5;
             this.label12.Text = "Administrador";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // checkBox1
             // 
@@ -333,7 +333,7 @@
             this.label1.Size = new System.Drawing.Size(217, 30);
             this.label1.TabIndex = 5;
             this.label1.Text = "Especialidad:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnRegistrar
             // 
